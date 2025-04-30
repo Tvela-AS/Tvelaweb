@@ -223,7 +223,7 @@ const Contact: React.FC = () => {
               <button
                 type='submit'
                 className='bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200 flex items-center'>
-                Send Message
+                Send Melding
                 <Send size={18} className='ml-2' />
               </button>
             </form>
