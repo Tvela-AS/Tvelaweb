@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
-          <div className='lg:col-span-1 bg-navy-900 text-white rounded-xl p-8 shadow-lg'>
+          <div className='lg:col-span-3 bg-navy-900 text-white rounded-xl p-8 shadow-lg'>
             <h3 className='text-2xl font-bold mb-6'>Kontakt Informasjon</h3>
 
             <div className='space-y-6'>
@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className='lg:col-span-2 bg-white rounded-xl p-8 shadow-lg'>
+          {/* <div className='lg:col-span-2 bg-white rounded-xl p-8 shadow-lg'>
             <h3 className='text-2xl font-bold mb-6 text-navy-900'>
               Send en melding
             </h3>
@@ -226,8 +226,8 @@ const Contact: React.FC = () => {
                 Send Melding
                 <Send size={18} className='ml-2' />
               </button>
-            </form>
-          </div>
+            </form> 
+          </div>*/}
         </div>
       </div>
     </section>
