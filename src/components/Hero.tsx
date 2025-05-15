@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
 
               <p className='text-xl text-gray-300/90 mb-10 leading-relaxed'>
                 Forandrer ideer til digitale opplevelser, gjennom innovativ
-                utvikling og strategisk innholdsskapning.
+                utvikling og strategisk innholdsplassering.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-6'>
