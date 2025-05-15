@@ -96,7 +96,7 @@ const projects: Project[] = [
     category: "Web Development",
     image: "/img/grovseter.png",
     description:
-      "Grøv Seter og Hytteutleie er en hytteutleie i Grøvseter i Valdres. Vi har utviklet en webside for dem med en CMS-løsning for å kunne administrere innleie, utleie og reservasjoner. Siden er foreløpig ikke publisert, men vi har levert en prototype for å vise hvordan websiden kan se ut.",
+      "Grøv Seter og Hytteutleie er en hytteutleiebedrift i Valdres. Vi har utviklet en webside for dem med en CMS-løsning for å kunne administrere innleie, utleie og reservasjoner. Siden er foreløpig ikke publisert, men vi har levert en prototype for å vise hvordan websiden kan se ut.",
     tags: [
       "React",
       "Google API",
