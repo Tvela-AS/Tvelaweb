@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
-    document.title = "Tvela AS | Cybersikkerhet & pen-testing din sikkerhetspartner i skyen";
+    document.title = "Tvela AS | systemutvikling og utvikling av digitale løsninger. webutvikling, mobilutvikling, cloud løsninger";
   }, []);
 
   return (
