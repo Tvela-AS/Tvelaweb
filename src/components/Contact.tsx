@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                   </svg>
                 </a>
                 <a
-                  href='#'
+                  href='#https://github.com/Tvela-AS'
                   className='w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-colors'>
                   <span className='sr-only'>GitHub</span>
                   <svg
