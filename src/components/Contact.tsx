@@ -1,7 +1,46 @@
-import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import React, { useState, useRef } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: false
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ submitting: true, submitted: false, error: false });
+
+    try {
+      await emailjs.sendForm(
+        'service_z2wrtgs', // Replace with your EmailJS service ID
+        'template_khy9o8p', // Replace with your EmailJS template ID
+        formRef.current!,
+        'x7ShLsT8YfhgSL0no' // Replace with your EmailJS public key
+      );
+
+      setStatus({ submitting: false, submitted: true, error: false });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus({ submitting: false, submitted: false, error: true });
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-navy-950 text-white relative overflow-hidden">
       {/* Animated background elements */}
@@ -38,7 +77,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-medium text-white">E-post</h4>
                   <a
-                    href="mailto:kontakt@tvela.no"
+                    href="mailto:hei@tvela.no"
                     className="text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     hei@tvela.no
@@ -51,7 +90,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-medium text-white">Telefon</h4>
                   <a
-                    href="tel:+4799999999"
+                    href="tel:+4795961415"
                     className="text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     +47 959 61 415
@@ -74,61 +113,88 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="bg-navy-800/50 p-8 rounded-xl border border-white/10">
-            <form className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                   Navn
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
+                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  placeholder="Ditt navn"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   E-post
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
+                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  placeholder="din.epost@eksempel.no"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
-                  Beskjed
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Melding
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={4}
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
-                ></textarea>
+                  rows={4}
+                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white resize-none"
+                  placeholder="Fortell oss om ditt prosjekt..."
+                />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-600 transition-colors"
+                disabled={status.submitting}
+                className={`w-full bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                  status.submitting
+                    ? 'opacity-50 cursor-not-allowed'
+                    : 'hover:bg-emerald-600 hover:scale-105'
+                }`}
               >
-                Send Melding
+                {status.submitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>Sender...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} />
+                    <span>Send Melding</span>
+                  </>
+                )}
               </button>
+
+              {status.submitted && (
+                <p className="text-emerald-400 text-center">
+                  Takk for din melding! Vi vil kontakte deg snart.
+                </p>
+              )}
+
+              {status.error && (
+                <p className="text-red-400 text-center">
+                  Beklager, det oppstod en feil. Vennligst prøv igjen senere.
+                </p>
+              )}
             </form>
           </div>
         </div>

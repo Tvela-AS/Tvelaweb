@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Facebook } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -33,6 +33,14 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100085235652093"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-emerald-400 transition-colors"
+              >
+                <Facebook size={20} />
               </a>
             </div>
           </div>
