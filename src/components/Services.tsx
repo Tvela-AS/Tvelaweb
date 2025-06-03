@@ -1,118 +1,75 @@
 import React from "react";
-import {
-  Edit,
-  Globe,
-  BarChart,
-  Megaphone,
-  Video,
-  Layout,
-  Target,
-  Users,
-  Shield,
-  Lock,
-  Search,
-  Bug,
-  Network,
-  Code,
-  FileSearch,
-  UserCheck,
-} from "lucide-react";
-
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  icon,
-}) => {
-  return (
-    <div className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-gray-100 group'>
-      <div className='w-14 h-14 mb-4 flex items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300'>
-        {icon}
-      </div>
-      <h3 className='text-xl font-bold mb-3 text-navy-900'>{title}</h3>
-      <p className='text-gray-600'>{description}</p>
-    </div>
-  );
-};
+import { Code, Server, Database, Globe, Smartphone, Cloud } from "lucide-react";
 
 const Services: React.FC = () => {
   const services = [
     {
-      title: "Penetrasjonstesting",
-      description:
-        "Omfattende sikkerhetstesting av systemer og nettverk for å identifisere sårbarheter før angripere gjør det.",
-      icon: <Bug size={24} />,
-    },
-    {
-      title: "Sikkerhetsvurdering",
-      description:
-        "Detaljert analyse av din bedrifts sikkerhetstilstand og anbefalinger for forbedringer.",
-      icon: <Search size={24} />,
-    },
-    {
-      title: "Nettverkssikkerhet",
-      description:
-        "Beskyttelse av nettverksinfrastruktur mot uautorisert tilgang og cyberangrep.",
-      icon: <Network size={24} />,
-    },
-    {
-      title: "Kodeanalyse",
-      description:
-        "Sikkerhetsgjennomgang av kildekode for å identifisere potensielle sårbarheter og sikkerhetshull.",
       icon: <Code size={24} />,
+      title: "Fullstack Utvikling",
+      description: "Komplette løsninger med moderne frontend og robust backend"
     },
     {
-      title: "Trusseljakt",
-      description:
-        "Proaktiv søking etter skjulte trusler og kompromitterte systemer i nettverket.",
-      icon: <FileSearch size={24} />,
+      icon: <Server size={24} />,
+      title: "Systemutvikling",
+      description: "Skalerbare systemer og applikasjoner for bedrifter"
     },
     {
-      title: "Sikkerhetsopplæring",
-      description:
-        "Tilpasset opplæring i cybersikkerhet for ansatte og ledelse.",
-      icon: <UserCheck size={24} />,
+      icon: <Database size={24} />,
+      title: "Database Design",
+      description: "Optimaliserte databaser og datahåndteringsløsninger"
     },
     {
-      title: "Sikkerhetsstrategi",
-      description:
-        "Utvikling av omfattende sikkerhetsstrategier og implementeringsplaner.",
-      icon: <Shield size={24} />,
+      icon: <Globe size={24} />,
+      title: "Webutvikling",
+      description: "Moderne og responsive nettsteder med fokus på brukeropplevelse"
     },
     {
-      title: "Kryptering",
-      description:
-        "Implementering av robuste krypteringsløsninger for å beskytte sensitive data.",
-      icon: <Lock size={24} />,
+      icon: <Smartphone size={24} />,
+      title: "Mobilapplikasjoner",
+      description: "Native og cross-platform mobilapplikasjoner"
     },
+    {
+      icon: <Cloud size={24} />,
+      title: "Cloud Løsninger",
+      description: "Skytjenester og cloud-infrastruktur"
+    }
   ];
 
   return (
-    <section id='services' className='py-20 bg-navy-950 text-white'>
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-3xl mx-auto text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-emerald-400'>
-            Våre Sikkerhetstjenester
+    <section id="services" className="py-20 bg-navy-950 text-white relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
+            Våre Tjenester
           </h2>
-          <div className='w-20 h-1 bg-emerald-500 mx-auto mb-6'></div>
-          <p className='text-xl text-gray-300'>
-            Omfattende cybersikkerhetstjenester for å beskytte din bedrift.
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Vi leverer skreddersydde digitale løsninger som møter dine forretningsbehov
           </p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard
+            <div
               key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-            />
+              className="bg-navy-800/50 p-6 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors"
+            >
+              <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-emerald-400">
+                {service.title}
+              </h3>
+              <p className="text-gray-300">
+                {service.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

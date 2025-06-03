@@ -1,41 +1,41 @@
 import React from "react";
-import { CheckCircle, Shield, Lock, Eye, Zap, Cpu } from "lucide-react";
+import { CheckCircle, Code, Server, Database, Zap, Cpu } from "lucide-react";
 
 const About: React.FC = () => {
   const whyChooseUs = [
-    "Sertifiserte sikkerhetseksperter",
-    "Industriledende penetrasjonstesting",
-    "Kontinuerlig trusselovervåking",
-    "Dedikerte sikkerhetsspesialister",
-    "Proaktiv trusseljakt",
-    "24/7 sikkerhetsovervåking",
+    "Erfarne utviklere",
+    "Moderne teknologistakk",
+    "Skalerbare løsninger",
+    "Dedikerte utviklingsteam",
+    "Agile utviklingsmetodikk",
+    "Kontinuerlig leveranse",
   ];
 
-  const securityFeatures = [
+  const techFeatures = [
     {
-      icon: <Shield size={24} />,
-      title: "Avansert Beskyttelse",
-      description: "State-of-the-art sikkerhetsteknologi for å beskytte dine systemer"
+      icon: <Code size={24} />,
+      title: "Fullstack Utvikling",
+      description: "Komplette løsninger fra frontend til backend"
     },
     {
-      icon: <Lock size={24} />,
-      title: "Kryptert Kommunikasjon",
-      description: "Ende-til-ende kryptering for alle sensitive data"
+      icon: <Server size={24} />,
+      title: "Skalerbar Arkitektur",
+      description: "Robuste systemer som vokser med dine behov"
     },
     {
-      icon: <Eye size={24} />,
-      title: "Trusselovervåking",
-      description: "Kontinuerlig overvåking og analyse av sikkerhetstrusler"
+      icon: <Database size={24} />,
+      title: "Datahåndtering",
+      description: "Effektiv lagring og prosessering av data"
     },
     {
       icon: <Zap size={24} />,
-      title: "Rask Respons",
-      description: "Umiddelbar håndtering av sikkerhetshendelser"
+      title: "Høy Ytelse",
+      description: "Optimaliserte løsninger for rask responstid"
     },
     {
       icon: <Cpu size={24} />,
-      title: "AI-Drevet Sikkerhet",
-      description: "Kunstig intelligens for proaktiv trusseljakt"
+      title: "Moderne Teknologi",
+      description: "Bruk av nyeste verktøy og rammeverk"
     }
   ];
 
@@ -55,16 +55,15 @@ const About: React.FC = () => {
             <div className='w-20 h-1 bg-emerald-500 mb-8'></div>
 
             <p className='text-gray-300 mb-6 text-lg'>
-              Tvela AS er ledende innen cybersikkerhet og etisk hacking, dedikert til å beskytte 
-              bedrifter mot digitale trusler og sikkerhetsrisikoer.
+              Tvela AS er en ledende leverandør av system- og applikasjonsutvikling, dedikert til å skape 
+              innovative digitale løsninger for bedrifter.
             </p>
 
             <p className='text-gray-300 mb-10'>
-              Grunnlagt i 2021, har vi raskt etablert oss som en pålitelig partner innen cybersikkerhet. 
-              Vårt team av sertifiserte sikkerhetseksperter jobber tett med kunder for å identifisere, 
-              analysere og eliminere sikkerhetstrusler. Vi kombinerer avansert teknologi med 
-              menneskelig ekspertise for å levere omfattende sikkerhetsløsninger som holder 
-              tritt med det stadig skiftende trussellandskapet.
+              Grunnlagt i 2021, har vi raskt etablert oss som en pålitelig partner innen programvareutvikling. 
+              Vårt team av erfarne utviklere jobber tett med kunder for å skape skalerbare og effektive 
+              systemer. Vi kombinerer moderne teknologi med best practices for å levere løsninger som 
+              møter dagens og morgendagens utfordringer.
             </p>
 
             <div className='mb-8'>
@@ -91,7 +90,7 @@ const About: React.FC = () => {
 
             <div className='relative z-10 bg-gradient-to-br from-navy-800 to-navy-900 rounded-xl border border-white/10 p-8 shadow-xl'>
               <div className='grid grid-cols-1 gap-6'>
-                {securityFeatures.map((feature, index) => (
+                {techFeatures.map((feature, index) => (
                   <div key={index} className='bg-navy-700/50 p-5 rounded-lg border border-white/5 hover:border-emerald-500/50 transition-colors'>
                     <div className='flex items-start gap-4'>
                       <div className='p-2 bg-emerald-500/10 rounded-lg text-emerald-400'>
