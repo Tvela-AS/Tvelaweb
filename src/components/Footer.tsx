@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-16">
           <div>
             <h3 className="text-xl font-bold mb-4 text-emerald-400">Tvela AS</h3>
             <p className="text-gray-300 mb-4">
@@ -102,26 +102,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Nyhetsbrev</h3>
-            <p className="text-gray-300 mb-4">
-              Meld deg på vårt nyhetsbrev for å holde deg oppdatert på nyheter og trender innen systemutvikling.
-            </p>
-            <form className="space-y-4">
-              <input
-                type="email"
-                placeholder="Din e-post"
-                className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full bg-emerald-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-600 transition-colors"
-              >
-                Meld på
-              </button>
-            </form>
-          </div>
+          
         </div>
 
         <div className="border-t border-white/10 py-8">
