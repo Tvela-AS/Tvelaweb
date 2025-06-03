@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start space-x-3">
                 <Mail className="text-emerald-400 mt-1" size={20} />
                 <a
-                  href="mailto:kontakt@tvela.no"
+                  href="mailto:hei@tvela.no"
                   className="text-gray-300 hover:text-emerald-400 transition-colors"
                 >
                   hei@tvela.no
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                   href="tel:+47 959 61 415"
                   className="text-gray-300 hover:text-emerald-400 transition-colors"
                 >
-                  +47 999 99 999
+                  +47 959 61 415
                 </a>
               </li>
               <li className="flex items-start space-x-3">
