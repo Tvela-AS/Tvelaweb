@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
-    document.title = "Tvela AS | Digitale Løsninger for moderne kunder";
+    document.title = "Tvela AS | Cybersikkerhet & Etisk Hacking";
   }, []);
 
   return (

@@ -13,13 +13,30 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Lillian Randby",
-    role: "Daglig Leder",
-    company: "Satch Valdres",
+    name: "Anders Berg",
+    role: "IT-Sjef",
+    company: "Nordic Bank",
     content:
-      "Vi har benyttet Tvela med utvikling av hjemmesiden vår og produktbilder. Vi er svært fornøyd med resultatet og de er alltid raskt tilgjengelig dersom vi ønsker forandringer. Anbefales veldig!",
-    image:
-      "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_1200_1200_s_f/0000/vald/2023/11/10/10/lillianrandby-22.jpg?chk=EC772E",
+      "Tvela har gjennomført omfattende sikkerhetsvurderinger av våre systemer og identifisert kritiske sårbarheter vi ikke var klar over. Deres ekspertise og profesjonalitet er imponerende.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&h=256&q=80",
+  },
+  {
+    id: 2,
+    name: "Maria Hansen",
+    role: "Sikkerhetssjef",
+    company: "TechCorp AS",
+    content:
+      "Deres penetrasjonstesting og sikkerhetsvurderinger har vært uvurderlige for vår sikkerhetsstrategi. Vi føler oss nå mye bedre forberedt mot digitale trusler.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&h=256&q=80",
+  },
+  {
+    id: 3,
+    name: "Erik Nilsen",
+    role: "CTO",
+    company: "Innovate Solutions",
+    content:
+      "Tvela's sikkerhetsopplæring har transformert hvordan våre ansatte håndterer sensitive data. Deres tilnærming til cybersikkerhet er både omfattende og praktisk.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&h=256&q=80",
   },
 ];
 
@@ -37,15 +54,15 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id='testimonials' className='py-20 bg-gray-50'>
+    <section id='testimonials' className='py-20 bg-navy-950 text-white'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='max-w-3xl mx-auto text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-navy-900'>
-            Referansekunder
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-emerald-400'>
+            Kundeerfaringer
           </h2>
           <div className='w-20 h-1 bg-emerald-500 mx-auto mb-6'></div>
-          <p className='text-xl text-gray-600'>
-            Hva har tidligere kunder sagt om samarbeidet med oss..
+          <p className='text-xl text-gray-300'>
+            Hva våre kunder sier om våre sikkerhetstjenester.
           </p>
         </div>
 

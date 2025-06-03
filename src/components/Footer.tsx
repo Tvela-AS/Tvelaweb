@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
           <div className='lg:col-span-2'>
             <div className='flex items-center mb-4'>
               <span className='text-2xl font-bold text-emerald-500'>Tvela</span>
-              <span className='ml-1 text-2xl font-bold'>AS</span>
+              <span className='ml-1 text-2xl font-bold'>Security</span>
             </div>
             <p className='text-gray-400 mb-6 max-w-md'>
-              Styrker bedrifter gjennom innovativ systemutvikling og content
-              management systemer.
+              Beskytt din bedrift mot digitale trusler med vår ekspertise innen cybersikkerhet, 
+              etisk hacking og penetrasjonstesting.
             </p>
             <div className='flex space-x-4'>
               <a
@@ -102,35 +102,35 @@ const Footer: React.FC = () => {
                 <a
                   href='#'
                   className='text-gray-400 hover:text-emerald-400 transition-colors'>
-                  Skreddersydd Software
+                  Penetrasjonstesting
                 </a>
               </li>
               <li>
                 <a
                   href='#'
                   className='text-gray-400 hover:text-emerald-400 transition-colors'>
-                  Webutvikling
+                  Sikkerhetsvurdering
                 </a>
               </li>
               <li>
                 <a
                   href='#'
                   className='text-gray-400 hover:text-emerald-400 transition-colors'>
-                  Mobilapplikasjoner
+                  Nettverkssikkerhet
                 </a>
               </li>
               <li>
                 <a
                   href='#'
                   className='text-gray-400 hover:text-emerald-400 transition-colors'>
-                  CMS Løsninger
+                  Kodeanalyse
                 </a>
               </li>
               <li>
                 <a
                   href='#'
                   className='text-gray-400 hover:text-emerald-400 transition-colors'>
-                  Systemintegrasjon
+                  Sikkerhetsopplæring
                 </a>
               </li>
             </ul>
@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
               </li>
               <li className='text-gray-400'>+47 959 61 415</li>
               <li className='text-gray-400'>hei@tvela.no</li>
-              <li className='text-gray-400'>Man-Fre: 9:00 AM - 6:00 PM</li>
+              <li className='text-gray-400'>24/7 Sikkerhetshotline</li>
             </ul>
           </div>
         </div>

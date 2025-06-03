@@ -27,11 +27,11 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: "Tjenester", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
+    { name: "Sikkerhetstjenester", href: "#services" },
+    { name: "Sikkerhetsprosjekter", href: "#portfolio" },
     { name: "Om Oss", href: "#about" },
-    { name: "Referanser", href: "#testimonials" },
-    { name: "Kontakt Oss", href: "#contact" },
+    { name: "Kundeerfaringer", href: "#testimonials" },
+    { name: "Sikkerhetskontakt", href: "#contact" },
   ];
 
   return (

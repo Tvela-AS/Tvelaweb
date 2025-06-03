@@ -8,6 +8,14 @@ import {
   Layout,
   Target,
   Users,
+  Shield,
+  Lock,
+  Search,
+  Bug,
+  Network,
+  Code,
+  FileSearch,
+  UserCheck,
 } from "lucide-react";
 
 interface ServiceCardProps {
@@ -35,65 +43,65 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 const Services: React.FC = () => {
   const services = [
     {
-      title: "Systemutvikling",
+      title: "Penetrasjonstesting",
       description:
-        "Brukervennlige apper, webapper og sytemer, spesiallaget for din bedrift og dine behov.",
-      icon: <Layout size={24} />,
+        "Omfattende sikkerhetstesting av systemer og nettverk for å identifisere sårbarheter før angripere gjør det.",
+      icon: <Bug size={24} />,
     },
     {
-      title: "Video Produksjon",
+      title: "Sikkerhetsvurdering",
       description:
-        "Høykvalitets video innhold, inkludert dronebilder, steadycams og lydspor.",
-      icon: <Video size={24} />,
+        "Detaljert analyse av din bedrifts sikkerhetstilstand og anbefalinger for forbedringer.",
+      icon: <Search size={24} />,
     },
     {
-      title: "Webutvikling",
+      title: "Nettverkssikkerhet",
       description:
-        "Engasjerende websider med innhold som konverterer besøk til inntekt og øker SEO-rankingen til bedriften din.",
-      icon: <Globe size={24} />,
+        "Beskyttelse av nettverksinfrastruktur mot uautorisert tilgang og cyberangrep.",
+      icon: <Network size={24} />,
     },
     {
-      title: "Innholdsstrategi",
+      title: "Kodeanalyse",
       description:
-        "Strategisk planlegging og utvikling av innhold, som samkjører med din bedrifts mål og målgruppe.",
-      icon: <Target size={24} />,
+        "Sikkerhetsgjennomgang av kildekode for å identifisere potensielle sårbarheter og sikkerhetshull.",
+      icon: <Code size={24} />,
     },
     {
-      title: "Innholdsproduksjon",
+      title: "Trusseljakt",
       description:
-        "Profesjonell innholdsproduksjon, innkludert artikler, Bilder og animasjoner.",
-      icon: <Edit size={24} />,
+        "Proaktiv søking etter skjulte trusler og kompromitterte systemer i nettverket.",
+      icon: <FileSearch size={24} />,
     },
     {
-      title: "Digital Markedsføring",
+      title: "Sikkerhetsopplæring",
       description:
-        "Gjennomført digital markedsføring som øker synligheten av ditt innhold og treffer din målgruppe.",
-      icon: <Megaphone size={24} />,
+        "Tilpasset opplæring i cybersikkerhet for ansatte og ledelse.",
+      icon: <UserCheck size={24} />,
     },
     {
-      title: "Innholdsanalyse",
+      title: "Sikkerhetsstrategi",
       description:
-        "AI-dreven analyse av ditt innhold, statistikk og rapportering for å optimalisere opplevelsen dere får av innholdet deres.",
-      icon: <BarChart size={24} />,
+        "Utvikling av omfattende sikkerhetsstrategier og implementeringsplaner.",
+      icon: <Shield size={24} />,
     },
     {
-      title: "SoMe",
+      title: "Kryptering",
       description:
-        "Strategisk innhold til sosiale medier. Utviklet og laget for å dyrke din merkevare.",
-      icon: <Users size={24} />,
+        "Implementering av robuste krypteringsløsninger for å beskytte sensitive data.",
+      icon: <Lock size={24} />,
     },
   ];
 
   return (
-    <section id='services' className='py-20 bg-gray-50'>
+    <section id='services' className='py-20 bg-navy-950 text-white'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='max-w-3xl mx-auto text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-navy-900'>
-            Våre Løsninger
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-emerald-400'>
+            Våre Sikkerhetstjenester
           </h2>
           <div className='w-20 h-1 bg-emerald-500 mx-auto mb-6'></div>
-          <p className='text-xl text-gray-600'>
-            Gjennomtenkte løsninger for bedrifter i utvikling.
+          <p className='text-xl text-gray-300'>
+            Omfattende cybersikkerhetstjenester for å beskytte din bedrift.
           </p>
         </div>
 
