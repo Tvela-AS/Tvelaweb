@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                   </svg>
                 </a>
                 <a
-                  href='#'
+                  href='https://www.linkedin.com/company/tvela-as/'
                   className='w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-colors'>
                   <span className='sr-only'>LinkedIn</span>
                   <svg
