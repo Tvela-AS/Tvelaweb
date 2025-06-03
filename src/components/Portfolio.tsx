@@ -127,14 +127,14 @@ const Portfolio: React.FC = () => {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section id='portfolio' className='py-20'>
+    <section id='portfolio' className='py-20 bg-navy-950 text-white relative overflow-hidden'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='max-w-3xl mx-auto text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-navy-900'>
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-emerald-400'>
             Vår Portfolio
           </h2>
           <div className='w-20 h-1 bg-emerald-500 mx-auto mb-6'></div>
-          <p className='text-xl text-gray-600'>
+          <p className='text-gray-300 max-w-2xl mx-auto'>
             Et utvalg av noen av våre jobber i senere tid.
           </p>
         </div>
