@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#" className="text-2xl font-bold text-white">
-              Tvela<span className="text-emerald-400">AS</span>
+              <img src="/img/logo-nobackground-5000.png" alt="Tvela Logo" className="w-60 h-50" />
             </a>
           </div>
 
