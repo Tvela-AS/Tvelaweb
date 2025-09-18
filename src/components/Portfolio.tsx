@@ -108,6 +108,24 @@ const projects: Project[] = [
     ],
     url: "https://grovseter.vercel.app/",
   },
+  {
+    id: 7,
+    title: "JL Fotografi",
+    category: "Web Development",
+    image: "/img/jornlarsen.png",
+    description:
+      "Fotograf og innholdsprodusent Jørn Larsen. Vi har utviklet en webside for innholdsprodusenten med bildegalleri, kontaktskjema og innebygget fakturasystem.",
+    tags: [
+      "React",
+      "Google API",
+      "Firebase",
+      "TypeScript",
+      "Vercel",
+      "EmailJS",
+      "NodeJS",
+    ],
+    url: "https://jornlarsen.no/",
+  },
 ];
 
 const Portfolio: React.FC = () => {
