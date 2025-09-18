@@ -10,6 +10,13 @@ const Testimonials: React.FC = () => {
       rating: 5,
       image: "/img/lillian.jpg"
     },
+     {
+      quote: "Jeg benyttet Tvela med utvikling av hjemmesiden en ny og oppdaert webside for JL Fotografi. Tvela var hele tiden raske med tilbakemeldinger og forbedringer etter mine ønsker, og var hele tiden på ballen. Anbefales veldig!",
+      author: "JL Fotografi",
+      role: "Fotograf og innholdsprodusent",
+      rating: 5,
+      image: "/img/jorn.jpg"
+    },
     
   ];
 
