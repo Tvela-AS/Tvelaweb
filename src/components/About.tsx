@@ -7,7 +7,6 @@ const About: React.FC = () => {
     "Avanserte penetrasjonstester",
     "Omfattende sikkerhetsrapporter",
     "Dedikerte sikkerhetsteam",
-    "ISO 27001 sertifisering",
     "24/7 sikkerhetsovervåkning",
   ];
 
