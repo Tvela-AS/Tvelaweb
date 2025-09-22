@@ -52,33 +52,33 @@ const Contact: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
-            Kontakt Oss
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
+            Kontakt Oss for Sikkerhetsvurdering
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            La oss diskutere hvordan vi kan hjelpe deg med å realisere dine digitale prosjekter
+            La oss diskutere hvordan vi kan hjelpe deg med å sikre din IT-infrastruktur mot cybertrusler
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-emerald-400">
-              Start et prosjekt
+            <h3 className="text-2xl font-bold mb-6 text-red-400">
+              Få Sikkerhetsvurdering
             </h3>
             <p className="text-gray-300 mb-8">
-              Fortell oss om ditt prosjekt, og vi vil hjelpe deg med å finne den beste løsningen
-              for dine behov. Vi tilbyr skreddersydde systemer og applikasjoner som driver
-              forretningsutvikling.
+              Fortell oss om dine sikkerhetsbehov, og vi vil hjelpe deg med å identifisere og
+              sikre sårbarheter i din IT-infrastruktur. Vi tilbyr omfattende penetrasjonstester,
+              sikkerhetsauditer og sårbarhetsanalyser.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <Mail className="text-emerald-400 mt-1" size={20} />
+                <Mail className="text-red-400 mt-1" size={20} />
                 <div>
                   <h4 className="font-medium text-white">E-post</h4>
                   <a
                     href="mailto:hei@tvela.no"
-                    className="text-gray-300 hover:text-emerald-400 transition-colors"
+                    className="text-gray-300 hover:text-red-400 transition-colors"
                   >
                     hei@tvela.no
                   </a>
@@ -86,12 +86,12 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <Phone className="text-emerald-400 mt-1" size={20} />
+                <Phone className="text-red-400 mt-1" size={20} />
                 <div>
                   <h4 className="font-medium text-white">Telefon</h4>
                   <a
                     href="tel:+4795961415"
-                    className="text-gray-300 hover:text-emerald-400 transition-colors"
+                    className="text-gray-300 hover:text-red-400 transition-colors"
                   >
                     +47 959 61 415
                   </a>
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <MapPin className="text-emerald-400 mt-1" size={20} />
+                <MapPin className="text-red-400 mt-1" size={20} />
                 <div>
                   <h4 className="font-medium text-white">Adresse</h4>
                   <p className="text-gray-300">
@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-white"
                   placeholder="Ditt navn"
                 />
               </div>
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-white"
                   placeholder="din.epost@eksempel.no"
                 />
               </div>
@@ -158,17 +158,17 @@ const Contact: React.FC = () => {
                   required
                   rows={4}
                   className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white resize-none"
-                  placeholder="Fortell oss om ditt prosjekt..."
+                  placeholder="Fortell oss om dine sikkerhetsbehov..."
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status.submitting}
-                className={`w-full bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                className={`w-full bg-red-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
                   status.submitting
                     ? 'opacity-50 cursor-not-allowed'
-                    : 'hover:bg-emerald-600 hover:scale-105'
+                    : 'hover:bg-red-600 hover:scale-105'
                 }`}
               >
                 {status.submitting ? (
@@ -185,8 +185,8 @@ const Contact: React.FC = () => {
               </button>
 
               {status.submitted && (
-                <p className="text-emerald-400 text-center">
-                  Takk for din melding! Vi vil kontakte deg snart.
+                <p className="text-red-400 text-center">
+                  Takk for din melding! Vi vil kontakte deg snart for å diskutere sikkerhetsvurderingen.
                 </p>
               )}
 

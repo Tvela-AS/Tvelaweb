@@ -17,28 +17,28 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="mb-8 inline-block">
                 <div className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-emerald-400 text-sm font-medium">
-                    Skreddersydd programvare
+                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  <span className="text-red-400 text-sm font-medium">
+                    Sertifisert Penetration Testing
                   </span>
                 </div>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70">
-                Innovativ
-                <span className="block text-emerald-400">Systemutvikling</span>
+                Cybersikkerhet
+                <span className="block text-red-400">og Infrastruktur</span>
               </h1>
 
               <p className="text-xl text-gray-300/90 mb-10 leading-relaxed">
-                Vi skaper skalerbare digitale løsninger som driver forretningsutvikling og effektiviserer prosesser.
+                Vi beskytter din bedrift mot cybertrusler gjennom penetrasjonstester, sårbarhetsanalyser og infrastruktur-sikkerhet.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <a
                   href="#contact"
-                  className="group bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center transform hover:scale-105"
+                  className="group bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center transform hover:scale-105"
                 >
-                  Start prosjektet ditt
+                  Få Sikkerhetsvurdering
                   <ArrowRight
                     size={18}
                     className="ml-2 group-hover:translate-x-1 transition-transform duration-200"
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
                   href="#services"
                   className="group bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center border border-white/10 hover:border-white/20"
                 >
-                  Våre Tjenester
+                  Våre Sikkerhetstjenester
                 </a>
               </div>
             </div>
@@ -64,17 +64,17 @@ const Hero: React.FC = () => {
                   <div className="w-3 h-3 rounded-full bg-emerald-400" />
                 </div>
                 <div className="p-6 space-y-4 font-mono text-sm">
-                  <div className="flex items-center text-emerald-400">
+                  <div className="flex items-center text-red-400">
                     <span className="text-white/50 mr-2">$</span>
-                    npm run dev
+                    nmap -sS target.com
                   </div>
-                  <div className="h-4 bg-emerald-500/20 w-3/4 rounded animate-pulse" />
-                  <div className="text-gray-400">// Initialiserer applikasjonen...</div>
-                  <div className="text-gray-400">// Laster komponenter...</div>
-                  <div className="h-4 bg-emerald-500/20 w-2/3 rounded animate-pulse" />
-                  <div className="text-emerald-400">✓ Server kjører på port 3000</div>
-                  <div className="text-emerald-400">✓ Database tilkoblet</div>
-                  <div className="text-emerald-400">✓ API endepunkter klare</div>
+                  <div className="h-4 bg-red-500/20 w-3/4 rounded animate-pulse" />
+                  <div className="text-gray-400">// Scanning for open ports...</div>
+                  <div className="text-gray-400">// Analyzing vulnerabilities...</div>
+                  <div className="h-4 bg-red-500/20 w-2/3 rounded animate-pulse" />
+                  <div className="text-red-400">⚠ Critical vulnerability found</div>
+                  <div className="text-red-400">⚠ SSL/TLS misconfiguration</div>
+                  <div className="text-emerald-400">✓ Security assessment complete</div>
                 </div>
               </div>
 
@@ -82,16 +82,16 @@ const Hero: React.FC = () => {
               <div className="absolute -right-4 bottom-4 bg-navy-800/90 backdrop-blur-xl rounded-2xl border border-white/10 p-6 shadow-xl">
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <div className="text-3xl font-bold text-emerald-400 mb-1">
-                      100+
+                    <div className="text-3xl font-bold text-red-400 mb-1">
+                      500+
                     </div>
-                    <div className="text-sm text-gray-400">Prosjekter Levert</div>
+                    <div className="text-sm text-gray-400">Sikkerhetstester</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-emerald-400 mb-1">
-                      99.9%
+                    <div className="text-3xl font-bold text-red-400 mb-1">
+                      100%
                     </div>
-                    <div className="text-sm text-gray-400">Oppetid</div>
+                    <div className="text-sm text-gray-400">Sertifisert</div>
                   </div>
                 </div>
               </div>

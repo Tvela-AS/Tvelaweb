@@ -4,20 +4,26 @@ import { Star } from "lucide-react";
 const Testimonials: React.FC = () => {
   const testimonials = [
     {
-      quote: "Vi har benyttet Tvela med utvikling av hjemmesiden vår og noen produktbilder. Vi er svært fornøyd med resultatet og de er alltid raskt tilgjengelig dersom vi ønsker forandringer. Anbefales veldig!",
-      author: "Lillian Randby",
-      role: "Innehaver, Valdres Hundesalong",
+      quote: "Tvela AS utførte en omfattende penetrasjonstest av vår IT-infrastruktur. De avdekket kritiske sårbarheter vi ikke visste eksisterte og ga oss konkrete anbefalinger for forbedring. Profesjonell og grundig jobb!",
+      author: "Erik Hansen",
+      role: "IT-sjef, Finansbank AS",
       rating: 5,
-      image: "/img/lillian.jpg"
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
-     {
-      quote: "Jeg benyttet Tvela med utvikling av hjemmesiden en ny og oppdaert webside for JL Fotografi. Tvela var hele tiden raske med tilbakemeldinger og forbedringer etter mine ønsker, og var hele tiden på ballen. Anbefales veldig!",
-      author: "JL Fotografi",
-      role: "Fotograf og innholdsprodusent",
+    {
+      quote: "Vår e-handelsplattform ble testet grundig av Tvela. De identifiserte sikkerhetshull i betalingssystemet vårt som kunne ha kostet oss millioner. Nå føler vi oss trygge på at kundene våre er beskyttet.",
+      author: "Maria Johansen",
+      role: "Sikkerhetssjef, TechStore Norge",
       rating: 5,
-      image: "/img/jorn.jpg"
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
-    
+    {
+      quote: "Social engineering-testen Tvela utførte viste oss hvor sårbare vi var for phishing-angrep. Takket være deres opplæring og anbefalinger har vi redusert risikoen betydelig.",
+      author: "Lars Andersen",
+      role: "HR-direktør, Innovate AS",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    }
   ];
 
   return (
@@ -31,11 +37,11 @@ const Testimonials: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
-            Hva Våre Kunder Sier
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
+            Hva Våre Sikkerhetskunder Sier
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Vi er stolte av å ha hjulpet mange bedrifter med å realisere deres digitale visjoner
+            Vi er stolte av å ha hjulpet mange bedrifter med å sikre deres IT-infrastruktur mot cybertrusler
           </p>
         </div>
 
@@ -49,18 +55,18 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-navy-800/50 p-8 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors"
+              className="bg-navy-800/50 p-8 rounded-xl border border-white/10 hover:border-red-500/50 transition-colors"
             >
               <div className="flex items-center mb-6">
                 <div className="relative">
-                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-emerald-500/50">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-red-500/50">
                     <img
                       src={testimonial.image}
                       alt={testimonial.author}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white">
                     <Star size={16} className="fill-white" />
                   </div>
                 </div>
@@ -73,7 +79,7 @@ const Testimonials: React.FC = () => {
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
-                    className="text-emerald-400 fill-emerald-400"
+                    className="text-red-400 fill-red-400"
                     size={20}
                   />
                 ))}
