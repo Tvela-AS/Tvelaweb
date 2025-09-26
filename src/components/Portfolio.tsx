@@ -14,117 +14,117 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Finanssektor Penetration Test",
-    category: "Penetration Testing",
+    title: "Webside med CMS og Trafikkmonitor",
+    category: "System Development",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1745935817542-b2c55033a6af?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Omfattende penetrasjonstest av en større finansinstitusjon som avdekket kritiske sårbarheter i nettverksinfrastrukturen og webapplikasjoner",
+      "En gjennomført webside med Sanity CMS i bakgrunn kjørende på våre interne servere med full overvåkning, FW og Spam-filter",
     tags: [
-      "OWASP",
-      "Nmap",
-      "Burp Suite",
-      "Metasploit",
-      "Nessus",
-      "Social Engineering",
-      "Network Security",
+      "React",
+      "Node.js",
+      "Sanity",
+      "Docker",
+      "Vercel",
+      "Typescript",
+      "Google API",
     ],
-    url: "#",
+    url: "https://www.valdreshundesalong.no",
   },
   {
     id: 2,
-    title: "E-handel Sikkerhetsaudit",
-    category: "Security Audit",
+    title: "FagernesAppen - Fagernes Handelsstand",
+    category: "Mobile Development",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description:
-      "Komplett sikkerhetsaudit av en stor e-handelsplattform som identifiserte sårbarheter i betalingssystemer og brukerdatahåndtering.",
-    tags: ["PCI DSS", "OWASP Top 10", "SSL/TLS", "Data Encryption", "Compliance"],
-    url: "#",
+      "En engen by-app for Fagernes i Valdres. Appen er laget for å spre budskapet om arrangementer, bedrifter og forretninger til turister og fastboende.",
+    tags: ["Next.js", "TypeScript", "Expo", "PostgreSQL", "React"],
+    url: "",
   },
   {
     id: 3,
-    title: "Nettverkssikkerhet Assessment",
-    category: "Network Security",
+    title: "Webside - UAS Valdres",
+    category: "Web Development",
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1745938606854-bd00587cc042?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Omfattende nettverkssikkerhetsvurdering for en teknologibedrift som avdekket konfigurasjonsfeil og potensielle innbruddsveier.",
-    tags: ["Network Scanning", "Firewall Analysis", "Intrusion Detection", "VPN Security", "Wireless Security"],
-    url: "#",
+      "Custom webside bygget i React med Typscript for dronefirmaet UAS-valdres. Kjører på våre interne servere og holdes oppgradert av automatiserte prosesser.",
+    tags: ["React", "Typescript", "NodeJS", "Vercel", "MsSQL", "EmailJS"],
+    url: "https://www.uas-valdres.no",
   },
   {
     id: 4,
-    title: "Cloud Infrastructure Security",
-    category: "Cloud Security",
+    title: "VSAR - Viken Search And Rescue",
+    category: "Web Development",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1745939313315-cdfe7a7fc028?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Sikkerhetsvurdering av cloud-infrastruktur for en SaaS-bedrift, inkludert konfigurasjonsanalyse og tilgangskontroll.",
+      "VSAR fikk utviklet sin nye webløsning hos oss med tilhørende database for savnede personer og medlemsinnlogging.",
     tags: [
-      "AWS Security",
-      "Azure Security",
-      "Container Security",
-      "Identity Management",
-      "Data Encryption",
-      "Compliance",
-      "Cloud Monitoring",
+      "React",
+      "Google API",
+      "Firebase",
+      "TypeScript",
+      "Vercel",
+      "EmailJS",
+      "NodeJS",
     ],
-    url: "#",
+    url: "https://www.vsar.no",
   },
   {
     id: 5,
-    title: "Social Engineering Assessment",
-    category: "Social Engineering",
+    title: "Øie Trafikkskole",
+    category: "Web Development",
     image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1745941313272-5b2c7cd52f78?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Kontrollert social engineering-test for en offentlig etat som viste sårbarheter i ansattes sikkerhetsbevissthet og prosedyrer.",
+      "Øie Trafikkskole var vår første fulle kunde innen webdesign. Websiden deres er levert i Wordpress CMS med spesialtilpasset design, bookingløsning for trafikkskoler og kontaktskjema.",
     tags: [
-      "Phishing Simulation",
-      "Physical Security",
-      "Security Awareness",
-      "Policy Review",
-      "Training Programs",
-      "Incident Response",
+      "Wordpress",
+      "Google API",
+      "CSS",
+      "TypeScript",
+      "Tabs",
+      "Custom Plugins",
     ],
-    url: "#",
+    url: "https://www.oietrafikkskole.no",
   },
   {
     id: 6,
-    title: "IoT Device Security Assessment",
-    category: "IoT Security",
-    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    title: "Grøv Seter Hytteutleie",
+    category: "Web Development",
+    image: "/img/grovseter.png",
     description:
-      "Sikkerhetsvurdering av IoT-enheter for en smart by-prosjekt, inkludert firmware-analyse og kommunikasjonssikkerhet.",
+      "Grøv Seter og Hytteutleie er en hytteutleiebedrift i Valdres. Vi har utviklet en webside for dem med en CMS-løsning for å kunne administrere innleie, utleie og reservasjoner. Siden er foreløpig ikke publisert, men vi har levert en prototype for å vise hvordan websiden kan se ut.",
     tags: [
-      "Firmware Analysis",
-      "Protocol Security",
-      "Device Hardening",
-      "Encryption",
-      "Access Control",
-      "Vulnerability Scanning",
-      "Compliance",
+      "React",
+      "Google API",
+      "Firebase",
+      "TypeScript",
+      "Vercel",
+      "EmailJS",
+      "NodeJS",
     ],
-    url: "#",
+    url: "https://grovseter.vercel.app/",
   },
   {
     id: 7,
-    title: "Red Team Exercise",
-    category: "Red Team",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    title: "JL Fotografi",
+    category: "Web Development",
+    image: "/img/jornlarsen.png",
     description:
-      "Omfattende red team-øvelse for en teknologibedrift som simulerte avanserte persisterende trusler (APT) og multi-vektor angrep.",
+      "Fotograf og innholdsprodusent Jørn Larsen. Vi har utviklet en webside for innholdsprodusenten med bildegalleri, kontaktskjema og innebygget fakturasystem.",
     tags: [
-      "Advanced Persistent Threat",
-      "Multi-Vector Attacks",
-      "Lateral Movement",
-      "Privilege Escalation",
-      "Data Exfiltration",
-      "Incident Response",
-      "Threat Hunting",
+      "React",
+      "Google API",
+      "Firebase",
+      "TypeScript",
+      "Vercel",
+      "EmailJS",
+      "NodeJS",
     ],
-    url: "#",
+    url: "https://jornlarsen.no/",
   },
 ];
 
@@ -133,13 +133,10 @@ const Portfolio: React.FC = () => {
 
   const categories = [
     "All",
-    "Penetration Testing",
-    "Security Audit",
-    "Network Security",
-    "Cloud Security",
-    "Social Engineering",
-    "IoT Security",
-    "Red Team",
+    "System Development",
+    "Web Development",
+    "Mobile Development",
+    "CMS",
   ];
 
   const filteredProjects =
@@ -151,12 +148,12 @@ const Portfolio: React.FC = () => {
     <section id='portfolio' className='py-20 bg-navy-950 text-white relative overflow-hidden'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='max-w-3xl mx-auto text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-red-400'>
-            Sikkerhetsprosjekter
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-emerald-400'>
+            Vår Portfolio
           </h2>
-          <div className='w-20 h-1 bg-red-500 mx-auto mb-6'></div>
+          <div className='w-20 h-1 bg-emerald-500 mx-auto mb-6'></div>
           <p className='text-gray-300 max-w-2xl mx-auto'>
-            Et utvalg av sikkerhetsassessments og penetrasjonstester vi har utført.
+            Et utvalg av noen av våre jobber i senere tid.
           </p>
         </div>
 
@@ -167,7 +164,7 @@ const Portfolio: React.FC = () => {
               onClick={() => setFilter(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === category
-                  ? "bg-red-600 text-white"
+                  ? "bg-emerald-600 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}>
               {category}
@@ -188,7 +185,7 @@ const Portfolio: React.FC = () => {
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent flex items-end p-6'>
                   <div>
-                    <span className='text-red-400 text-sm font-medium mb-1 inline-block'>
+                    <span className='text-emerald-400 text-sm font-medium mb-1 inline-block'>
                       {project.category}
                     </span>
                     <h3 className='text-white text-xl font-bold'>
@@ -210,8 +207,8 @@ const Portfolio: React.FC = () => {
                 </div>
                 <a
                   href={project.url}
-                  className='inline-flex items-center text-red-600 font-medium hover:text-red-700 transition-colors'>
-                  Se Sikkerhetsrapport <ExternalLink size={16} className='ml-1' />
+                  className='inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700 transition-colors'>
+                  Se Prosjekt <ExternalLink size={16} className='ml-1' />
                 </a>
               </div>
             </div>

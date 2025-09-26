@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { name: "Hjem", href: "#" },
-    { name: "Sikkerhetstjenester", href: "#services" },
-    { name: "Sikkerhetsprosjekter", href: "#portfolio" },
+    { name: "Tjenester", href: "#services" },
+    { name: "Prosjekter", href: "#portfolio" },
     { name: "Om Oss", href: "#about" },
     { name: "Kontakt", href: "#contact" },
   ];
@@ -52,9 +52,9 @@ const Navbar: React.FC = () => {
               ))}
               <a
                 href="#contact"
-                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full transition-colors"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full transition-colors"
               >
-                Få Sikkerhetsvurdering
+                Start Prosjekt
               </a>
             </div>
           </div>
@@ -87,10 +87,10 @@ const Navbar: React.FC = () => {
             ))}
             <a
               href="#contact"
-              className="block px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors"
+              className="block px-3 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Få Sikkerhetsvurdering
+              Start Prosjekt
             </a>
           </div>
         </div>

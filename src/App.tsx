@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -11,7 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   useEffect(() => {
-    document.title = "Tvela AS | Penetration Testing & Infrastructure Security | Cybersikkerhet og sårbarhetsanalyser";
+    document.title = "Tvela AS | systemutvikling og utvikling av digitale løsninger. webutvikling, mobilutvikling, cloud løsninger";
   }, []);
 
   return (
@@ -22,7 +22,7 @@ function App() {
         <Services />
         <Portfolio />
         <About />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

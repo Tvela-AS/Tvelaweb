@@ -1,37 +1,37 @@
 import React from "react";
-import { Shield, Lock, Eye, Search, Network, AlertTriangle } from "lucide-react";
+import { Code, Server, Database, Globe, Smartphone, Cloud } from "lucide-react";
 
 const Services: React.FC = () => {
   const services = [
     {
-      icon: <Shield size={24} />,
-      title: "Penetration Testing",
-      description: "Omfattende sikkerhetstester som simulerer ekte cyberangrep for å identifisere sårbarheter"
+      icon: <Code size={24} />,
+      title: "Fullstack Utvikling",
+      description: "Komplette løsninger med moderne frontend og robust backend"
     },
     {
-      icon: <Lock size={24} />,
-      title: "Infrastruktur Sikkerhet",
-      description: "Sikkerhetsvurdering av nettverk, servere og IT-infrastruktur"
+      icon: <Server size={24} />,
+      title: "Systemutvikling",
+      description: "Skalerbare systemer og applikasjoner for bedrifter"
     },
     {
-      icon: <Eye size={24} />,
-      title: "Sårbarhetsanalyser",
-      description: "Systematisk gjennomgang av sikkerhetshull i applikasjoner og systemer"
+      icon: <Database size={24} />,
+      title: "Database Design",
+      description: "Optimaliserte databaser og datahåndteringsløsninger"
     },
     {
-      icon: <Search size={24} />,
-      title: "Sikkerhetsaudit",
-      description: "Komplett gjennomgang av sikkerhetspolicyer og implementeringer"
+      icon: <Globe size={24} />,
+      title: "Webutvikling",
+      description: "Moderne og responsive nettsteder med fokus på brukeropplevelse"
     },
     {
-      icon: <Network size={24} />,
-      title: "Nettverkssikkerhet",
-      description: "Analyse og sikring av bedriftsnettverk mot trusler"
+      icon: <Smartphone size={24} />,
+      title: "Mobilapplikasjoner",
+      description: "Native og cross-platform mobilapplikasjoner"
     },
     {
-      icon: <AlertTriangle size={24} />,
-      title: "Incident Response",
-      description: "Rask respons og håndtering av sikkerhetshendelser"
+      icon: <Cloud size={24} />,
+      title: "Cloud Løsninger",
+      description: "Skytjenester og cloud-infrastruktur"
     }
   ];
 
@@ -46,11 +46,11 @@ const Services: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
-            Våre Sikkerhetstjenester
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
+            Våre Tjenester
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Vi beskytter din bedrift mot cybertrusler med avanserte sikkerhetstjenester og ekspertise
+            Vi leverer skreddersydde digitale løsninger som møter dine forretningsbehov
           </p>
         </div>
 
@@ -58,12 +58,12 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-navy-800/50 p-6 rounded-xl border border-white/10 hover:border-red-500/50 transition-colors"
+              className="bg-navy-800/50 p-6 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors"
             >
-              <div className="p-3 bg-red-500/10 rounded-lg w-fit mb-4">
+              <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2 text-red-400">
+              <h3 className="text-xl font-bold mb-2 text-emerald-400">
                 {service.title}
               </h3>
               <p className="text-gray-300">
