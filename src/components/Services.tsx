@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, Server, Database, Globe, Smartphone, Cloud } from "lucide-react";
+import { Code, Server, Database, Globe, Smartphone, Cloud, Camera, Megaphone } from "lucide-react";
 
 const Services: React.FC = () => {
   const services = [
@@ -12,6 +12,16 @@ const Services: React.FC = () => {
       icon: <Server size={24} />,
       title: "Systemutvikling",
       description: "Skalerbare systemer og applikasjoner for bedrifter"
+    },
+    {
+      icon: <Camera size={24} />,
+      title: "Innholdsproduksjon",
+      description: "Profesjonell foto, video og designtjenester for din bedrift"
+    },
+    {
+      icon: <Megaphone size={24} />,
+      title: "Innholdshåndtering",
+      description: "Markedsføring, annonsering og content management"
     },
     {
       icon: <Database size={24} />,
@@ -32,7 +42,8 @@ const Services: React.FC = () => {
       icon: <Cloud size={24} />,
       title: "Cloud Løsninger",
       description: "Skytjenester og cloud-infrastruktur"
-    }
+    },
+    
   ];
 
   return (
@@ -50,7 +61,7 @@ const Services: React.FC = () => {
             Våre Tjenester
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Vi leverer skreddersydde digitale løsninger som møter dine forretningsbehov
+            Vi leverer skreddersydde digitale løsninger, innholdsproduksjon og markedsføringstjenester som møter dine forretningsbehov
           </p>
         </div>
 

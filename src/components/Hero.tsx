@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
                 <div className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-emerald-400 text-sm font-medium">
-                    Skreddersydd programvare
+                    Programvare · Innhold · Markedsføring
                   </span>
                 </div>
               </div>
@@ -27,10 +27,13 @@ const Hero: React.FC = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70">
                 Innovativ
                 <span className="block text-emerald-400">Systemutvikling</span>
+                Og 
+                <span className="block text-emerald-400">Innholdsproduksjon</span>
+                
               </h1>
 
               <p className="text-xl text-gray-300/90 mb-10 leading-relaxed">
-                Vi skaper skalerbare digitale løsninger som driver forretningsutvikling og effektiviserer prosesser.
+                Vi skaper skalerbare digitale løsninger, profesjonelt innhold og effektive markedsføringsstrategier som driver forretningsutvikling.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">

@@ -55,15 +55,16 @@ const About: React.FC = () => {
             <div className='w-20 h-1 bg-emerald-500 mb-8'></div>
 
             <p className='text-gray-300 mb-6 text-lg'>
-              Tvela AS er en ledende leverandør av system- og applikasjonsutvikling, dedikert til å skape 
-              innovative digitale løsninger for bedrifter.
+              Tvela AS er en ledende leverandør av system- og applikasjonsutvikling, innholdsproduksjon 
+              og innholdshåndtering, dedikert til å skape innovative digitale løsninger for bedrifter.
             </p>
 
             <p className='text-gray-300 mb-10'>
-              Grunnlagt i 2021, har vi raskt etablert oss som en pålitelig partner innen programvareutvikling. 
-              Vårt team av erfarne utviklere jobber tett med kunder for å skape skalerbare og effektive 
-              systemer. Vi kombinerer moderne teknologi med best practices for å levere løsninger som 
-              møter dagens og morgendagens utfordringer.
+              Grunnlagt i 2021, har vi raskt etablert oss som en pålitelig partner innen programvareutvikling, 
+              innholdsproduksjon og digital markedsføring. Vårt team av erfarne utviklere, fotografer, 
+              videografer og designere jobber tett med kunder for å skape skalerbare systemer, engasjerende 
+              innhold og effektive markedsføringsløsninger. Vi kombinerer moderne teknologi med kreativitet 
+              og best practices for å levere helhetlige løsninger som møter dagens og morgendagens utfordringer.
             </p>
 
             <div className='mb-8'>

@@ -11,7 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   useEffect(() => {
-    document.title = "Tvela AS | systemutvikling og utvikling av digitale løsninger. webutvikling, mobilutvikling, cloud løsninger";
+    document.title = "Tvela AS | systemutvikling, webutvikling, innholdsproduksjon og markedsføring. Foto, video, design og content management";
   }, []);
 
   return (

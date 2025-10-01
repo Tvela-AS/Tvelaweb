@@ -19,7 +19,7 @@ const projects: Project[] = [
     image:
       "https://images.unsplash.com/photo-1745935817542-b2c55033a6af?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "En gjennomført webside med Sanity CMS i bakgrunn kjørende på våre interne servere med full overvåkning, FW og Spam-filter",
+      "Leveranse av webside med Sanity CMS og Trafikkmonitor samt produktbilder og profileringsbilder for Hundesalongen i Valdres.",
     tags: [
       "React",
       "Node.js",

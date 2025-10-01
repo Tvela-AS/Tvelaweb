@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-emerald-400">Tvela AS</h3>
             <p className="text-gray-300 mb-4">
-              Vi skaper innovative digitale løsninger og systemer som driver forretningsutvikling og effektiviserer prosesser.
+              Vi skaper innovative digitale løsninger, engasjerende innhold og effektive markedsføringsstrategier som driver forretningsutvikling.
             </p>
             <div className="flex space-x-4">
               <a
@@ -66,6 +66,16 @@ const Footer: React.FC = () => {
               <li>
                 <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
                   Mobilapplikasjoner
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Innholdsproduksjon
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Innholdshåndtering
                 </a>
               </li>
             </ul>
