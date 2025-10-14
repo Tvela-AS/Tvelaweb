@@ -90,24 +90,7 @@ const projects: Project[] = [
     ],
     url: "https://www.oietrafikkskole.no",
   },
-  {
-    id: 6,
-    title: "Grøv Seter Hytteutleie",
-    category: "Web Development",
-    image: "/img/grovseter.png",
-    description:
-      "Grøv Seter og Hytteutleie er en hytteutleiebedrift i Valdres. Vi har utviklet en webside for dem med en CMS-løsning for å kunne administrere innleie, utleie og reservasjoner. Siden er foreløpig ikke publisert, men vi har levert en prototype for å vise hvordan websiden kan se ut.",
-    tags: [
-      "React",
-      "Google API",
-      "Firebase",
-      "TypeScript",
-      "Vercel",
-      "EmailJS",
-      "NodeJS",
-    ],
-    url: "https://grovseter.vercel.app/",
-  },
+  
   {
     id: 7,
     title: "JL Fotografi",
