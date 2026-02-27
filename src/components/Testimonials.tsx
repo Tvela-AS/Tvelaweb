@@ -3,6 +3,13 @@ import { Star } from "lucide-react";
 
 const Testimonials: React.FC = () => {
   const testimonials = [
+     {
+      quote: "Vi benyttet Tvela med utvikling og vedlikehold av vår nye webside. Tvela gjorde dette arbeide pro-bono for oss, og vi er svært fornøyd med resultatet. Anbefales!",
+      author: "Viken Search And Rescue",
+      role: "Frivillig søk og redningstjeneste",
+      rating: 5,
+      image: "/img/vsar_logo.png"
+    },
     {
       quote: "Vi har benyttet Tvela med utvikling av hjemmesiden vår og noen produktbilder. Vi er svært fornøyd med resultatet og de er alltid raskt tilgjengelig dersom vi ønsker forandringer. Anbefales veldig!",
       author: "Lillian Randby",
