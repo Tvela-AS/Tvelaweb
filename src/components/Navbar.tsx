@@ -15,12 +15,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: "Hjem", href: "#" },
+    { name: "Home", href: "#" },
+    { name: "Nyheter & Innsikt", href: "#insights" },
     { name: "Om oss", href: "#about" },
-    { name: "Tjenester", href: "#services" },
-    { name: "Når kontakte oss", href: "#nar-kontakte" },
-    { name: "Hvordan vi jobber", href: "#hvordan-vi-jobber" },
-    { name: "Kontakt", href: "#contact" },
   ];
 
   return (
@@ -30,48 +27,44 @@ const Navbar: React.FC = () => {
           ? "bg-navy-950/90 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
-      aria-label="Hovednavigasjon"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold text-white">
+      aria-label='Hovednavigasjon'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between h-20'>
+          <div className='flex-shrink-0'>
+            <a href='#' className='text-2xl font-bold text-white'>
               <img
-                src="/img/logo-nobackground-5000.png"
-                alt="Tvela AS"
-                className="w-60 h-50"
+                src='/img/logo-nobackground-5000.png'
+                alt='Tvela AS'
+                className='w-60 h-50'
               />
             </a>
           </div>
 
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center gap-6 lg:gap-8">
+          <div className='hidden md:block'>
+            <div className='ml-10 flex items-center gap-6 lg:gap-8'>
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
+                  className='text-gray-300 hover:text-white transition-colors text-sm'>
                   {item.name}
                 </a>
               ))}
               <a
-                href="#contact"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
-              >
+                href='#contact'
+                className='bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors'>
                 Kontakt oss
               </a>
             </div>
           </div>
 
-          <div className="md:hidden">
+          <div className='md:hidden'>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none p-2"
+              className='text-gray-300 hover:text-white focus:outline-none p-2'
               aria-expanded={isOpen}
-              aria-controls="mobile-menu"
-              id="mobile-menu-button"
-            >
+              aria-controls='mobile-menu'
+              id='mobile-menu-button'>
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -79,26 +72,23 @@ const Navbar: React.FC = () => {
       </div>
 
       <div
-        id="mobile-menu"
+        id='mobile-menu'
         className={`md:hidden ${isOpen ? "block" : "hidden"} bg-navy-950/95 backdrop-blur-xl border-b border-white/10`}
-        aria-labelledby="mobile-menu-button"
-      >
-        <div className="px-4 py-4 space-y-1">
+        aria-labelledby='mobile-menu-button'>
+        <div className='px-4 py-4 space-y-1'>
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
+              className='block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors'
+              onClick={() => setIsOpen(false)}>
               {item.name}
             </a>
           ))}
           <a
-            href="#contact"
-            className="block px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-md transition-colors text-center font-medium"
-            onClick={() => setIsOpen(false)}
-          >
+            href='#contact'
+            className='block px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-md transition-colors text-center font-medium'
+            onClick={() => setIsOpen(false)}>
             Kontakt oss
           </a>
         </div>

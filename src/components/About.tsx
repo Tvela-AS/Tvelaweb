@@ -26,44 +26,47 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-navy-950 text-white relative overflow-hidden"
+      className="py-section lg:py-section-lg bg-navy-900/80 text-white relative overflow-hidden"
       aria-labelledby="about-heading"
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
+        <div className="max-w-3xl mx-auto text-center mb-16 lg:mb-20">
+          <p className="text-section-label font-semibold uppercase tracking-[0.2em] text-emerald-400 mb-4">
+            Om oss
+          </p>
           <h2
             id="about-heading"
-            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 leading-tight"
           >
-            Om Tvela AS
+            Hvem vi er
           </h2>
-          <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6" />
-          <p className="text-gray-300 text-lg">
-            Vi kombinerer IT-drift, sikkerhet og digital gransking under én
-            strukturert og pålitelig partner – uten buzzwords, med tydelig
-            metodikk og ansvar.
+          <p className="text-gray-300/90 text-lg leading-relaxed">
+            Vi er et fagmiljø innen IT-drift, cybersikkerhet og digital
+            gransking. Vi rådgir ledere, styrer og fagmiljøer som trenger en
+            ærlig og strukturert partner når sikkerhet og teknologi blir
+            forretningskritisk.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 max-w-5xl mx-auto">
           {pillars.map((item, index) => (
             <article
               key={index}
-              className="bg-navy-800/50 p-6 rounded-xl border border-white/10 hover:border-emerald-500/30 transition-colors"
+              className="bg-white/[0.04] p-8 lg:p-10 rounded-2xl border border-white/10 hover:border-emerald-500/20 hover:bg-white/[0.06] transition-all duration-300"
             >
-              <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4 text-emerald-400">
+              <div className="p-3.5 bg-emerald-500/10 rounded-xl w-fit mb-6 text-emerald-400">
                 {item.icon}
               </div>
-              <h3 className="text-lg font-bold mb-2 text-white">
+              <h3 className="text-lg font-semibold mb-3 text-white tracking-tight leading-snug">
                 {item.title}
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-300/90 text-sm leading-relaxed">
                 {item.description}
               </p>
             </article>

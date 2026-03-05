@@ -3,6 +3,17 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      fontSize: {
+        'section-label': ['0.75rem', { lineHeight: '1', letterSpacing: '0.2em' }],
+        'section-title': ['2.25rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+      },
+      spacing: {
+        'section': '7rem',
+        'section-lg': '9rem',
+      },
       colors: {
         navy: {
           50: '#f0f5fa',

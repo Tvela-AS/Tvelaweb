@@ -51,47 +51,51 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-navy-900 text-white relative overflow-hidden"
+      className="py-section lg:py-section-lg bg-navy-900/80 text-white relative overflow-hidden"
       aria-labelledby="services-heading"
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
+        <div className="text-center mb-20">
+          <p className="text-section-label font-semibold uppercase tracking-[0.2em] text-emerald-400 mb-4">
+            Tjenester
+          </p>
           <h2
             id="services-heading"
-            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 leading-tight"
           >
             Våre tjenesteområder
           </h2>
-          <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6" />
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300/90 max-w-2xl mx-auto text-lg leading-relaxed">
             Vi tilbyr strukturert og nøktern leveranse innen IT-drift,
             sikkerhet og digital gransking – uten overdrevne løfter.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
           {areas.map((area) => (
             <article
               key={area.id}
-              className="bg-navy-800/50 rounded-xl border border-white/10 hover:border-emerald-500/30 transition-colors overflow-hidden"
+              className="bg-white/[0.04] rounded-2xl border border-white/10 hover:border-emerald-500/20 hover:bg-white/[0.06] transition-all duration-300 overflow-hidden"
             >
-              <div className="p-6 border-b border-white/10">
-                <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4 text-emerald-400">
+              <div className="p-8 lg:p-10 border-b border-white/5">
+                <div className="p-3.5 bg-emerald-500/10 rounded-xl w-fit mb-6 text-emerald-400">
                   {area.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white">{area.title}</h3>
+                <h3 className="text-xl font-semibold text-white tracking-tight leading-snug">
+                  {area.title}
+                </h3>
               </div>
-              <ul className="p-6 space-y-3" role="list">
+              <ul className="p-8 lg:p-10 space-y-4" role="list">
                 {area.items.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-gray-300 text-sm"
+                    className="flex items-center gap-3 text-gray-300 text-sm leading-relaxed"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/70 flex-shrink-0" />
                     {item.label}

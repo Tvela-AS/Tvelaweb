@@ -46,33 +46,35 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-navy-950 text-white relative overflow-hidden"
+      className="py-section lg:py-section-lg bg-navy-950 text-white relative overflow-hidden"
       aria-labelledby="contact-heading"
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
+        <div className="text-center mb-16 lg:mb-20">
+          <p className="text-section-label font-semibold uppercase tracking-[0.2em] text-emerald-400 mb-4">
+            Kontakt
+          </p>
           <h2
             id="contact-heading"
-            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 leading-tight"
           >
-            Kontakt oss
+            Ta kontakt med oss
           </h2>
-          <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6" />
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300/90 max-w-2xl mx-auto text-lg leading-relaxed">
             Vi samarbeider med daglig leder, styre, HR og advokat i saker som
             berører IT, sikkerhet eller digital gransking. Ta gjerne kontakt
             for en diskret og uforpliktende dialog.
           </p>
         </div>
 
-        <div className="flex flex-col items-center mb-12">
-          <div className="flex flex-wrap justify-center gap-6 text-gray-300">
+        <div className="flex flex-col items-center mb-14">
+          <div className="flex flex-wrap justify-center gap-8 text-gray-300/90 text-sm">
             <span className="flex items-center gap-2">
               <Users size={18} className="text-emerald-400" />
               Daglig leder
@@ -92,17 +94,17 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 max-w-5xl mx-auto">
           <div>
-            <h3 className="text-xl font-bold mb-6 text-white">
+            <h3 className="text-xl font-semibold mb-6 text-white tracking-tight">
               Ta kontakt
             </h3>
-            <p className="text-gray-300 mb-8">
+            <p className="text-gray-300/90 mb-10 text-base leading-relaxed">
               Send en melding eller ring oss. Vi behandler alle henvendelser
               diskret og profesjonelt.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <Mail className="text-emerald-400 mt-1 flex-shrink-0" size={20} />
                 <div>
@@ -143,7 +145,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-navy-800/50 p-8 rounded-xl border border-white/10">
+          <div className="bg-white/[0.04] p-8 lg:p-10 rounded-2xl border border-white/10">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
@@ -152,7 +154,7 @@ const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-300/90 mb-2"
                 >
                   Navn
                 </label>
@@ -163,7 +165,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/30 text-white placeholder-gray-500 transition-colors"
                   placeholder="Ditt navn"
                 />
               </div>
@@ -171,7 +173,7 @@ const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-300/90 mb-2"
                 >
                   E-post
                 </label>
@@ -182,7 +184,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/30 text-white placeholder-gray-500 transition-colors"
                   placeholder="din.epost@eksempel.no"
                 />
               </div>
@@ -190,7 +192,7 @@ const Contact: React.FC = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-300/90 mb-2"
                 >
                   Melding
                 </label>
@@ -200,8 +202,8 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={4}
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white resize-none"
+                  rows={5}
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/30 text-white placeholder-gray-500 resize-none transition-colors"
                   placeholder="Kort beskrivelse av henvendelsen..."
                 />
               </div>
@@ -209,7 +211,7 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={status.submitting}
-                className={`w-full bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
+                className={`w-full bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
                   status.submitting
                     ? "opacity-50 cursor-not-allowed"
                     : ""
