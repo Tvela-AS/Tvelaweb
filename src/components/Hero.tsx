@@ -3,7 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-950">
+    <section
+      id="top"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-950"
+      aria-labelledby="hero-heading"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
@@ -24,16 +28,20 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70">
+              <h1
+                id="hero-heading"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70"
+              >
                 Innovativ
                 <span className="block text-emerald-400">Systemutvikling</span>
-                Og 
+                og
                 <span className="block text-emerald-400">Innholdsproduksjon</span>
-                
               </h1>
 
               <p className="text-xl text-gray-300/90 mb-10 leading-relaxed">
-                Vi skaper skalerbare digitale løsninger, profesjonelt innhold og effektive markedsføringsstrategier som driver forretningsutvikling.
+                Tvela AS i Fagernes lager skalerbare webløsninger, systemer,
+                profesjonelt innhold og markedsføring som driver
+                forretningsutvikling i Valdres og resten av Norge.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">
@@ -60,7 +68,10 @@ const Hero: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               {/* Code window mockup */}
-              <div className="bg-navy-800/50 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+              <div
+                className="bg-navy-800/50 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
+                aria-hidden="true"
+              >
                 <div className="flex items-center gap-2 px-6 py-4 border-b border-white/10">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-amber-400" />

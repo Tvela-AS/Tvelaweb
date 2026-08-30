@@ -53,6 +53,7 @@ const Products: React.FC = () => {
     <section
       id="products"
       className="py-20 bg-navy-950 text-white relative overflow-hidden"
+      aria-labelledby="products-heading"
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
@@ -62,7 +63,10 @@ const Products: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
+          <h2
+            id="products-heading"
+            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+          >
             Våre Produkter
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
@@ -128,7 +132,10 @@ const Products: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative bg-navy-900/60 p-8 md:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-white/10">
+            <div
+              className="relative bg-navy-900/60 p-8 md:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-white/10"
+              aria-hidden="true"
+            >
               <div className="w-full max-w-[320px] bg-white rounded-2xl shadow-2xl overflow-hidden text-slate-900">
                 <div className="px-5 pt-6 pb-4 text-center border-b border-slate-100">
                   <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">

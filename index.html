@@ -1,12 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tvela AS</title>
+    <title>Tvela AS – Systemutvikling og webutvikling i Valdres</title>
+    <meta
+      name="description"
+      content="Tvela AS i Fagernes leverer systemutvikling, webutvikling, innholdsproduksjon og markedsføring. Se Folkejury, portefølje og ta kontakt for ditt neste prosjekt."
+    />
+    <meta name="author" content="Tvela AS" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="geo.region" content="NO-34" />
+    <meta name="geo.placename" content="Fagernes, Valdres" />
+
+    <link rel="canonical" href="https://www.tvela.no/" />
+    <link rel="icon" type="image/png" href="/img/logo-nobackground-5000.png" />
+    <link rel="apple-touch-icon" href="/img/logo-nobackground-5000.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="nb_NO" />
+    <meta property="og:site_name" content="Tvela AS" />
+    <meta property="og:url" content="https://www.tvela.no/" />
+    <meta
+      property="og:title"
+      content="Tvela AS – Systemutvikling og webutvikling i Valdres"
+    />
+    <meta
+      property="og:description"
+      content="Systemutvikling, webutvikling, innhold og markedsføring fra Fagernes. Vi bygger skalerbare løsninger og produkter som Folkejury."
+    />
+    <meta
+      property="og:image"
+      content="https://www.tvela.no/img/logo-nobackground-5000.png"
+    />
+    <meta property="og:image:alt" content="Tvela AS-logo" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Tvela AS – Systemutvikling og webutvikling i Valdres"
+    />
+    <meta
+      name="twitter:description"
+      content="Systemutvikling, webutvikling, innhold og markedsføring fra Fagernes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.tvela.no/img/logo-nobackground-5000.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://www.tvela.no/#business",
+            "name": "Tvela AS",
+            "url": "https://www.tvela.no/",
+            "logo": "https://www.tvela.no/img/logo-nobackground-5000.png",
+            "image": "https://www.tvela.no/img/logo-nobackground-5000.png",
+            "email": "hei@tvela.no",
+            "telephone": "+4795961415",
+            "foundingDate": "2021",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Valdresvegen 6",
+              "addressLocality": "Fagernes",
+              "postalCode": "2900",
+              "addressRegion": "Innlandet",
+              "addressCountry": "NO"
+            },
+            "areaServed": ["Valdres", "Innlandet", "Norge"],
+            "sameAs": [
+              "https://github.com/Tvela-AS",
+              "https://www.linkedin.com/company/tvela-as/",
+              "https://www.facebook.com/profile.php?id=100085235652093"
+            ],
+            "knowsAbout": [
+              "Systemutvikling",
+              "Webutvikling",
+              "Innholdsproduksjon",
+              "Markedsføring",
+              "Mobilapplikasjoner"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.tvela.no/#website",
+            "url": "https://www.tvela.no/",
+            "name": "Tvela AS",
+            "inLanguage": "nb-NO",
+            "publisher": { "@id": "https://www.tvela.no/#business" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://www.tvela.no/#folkejury",
+            "name": "Folkejury",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://vote-app-self.vercel.app",
+            "description": "Avstemningssystem for festivaler, foreninger og arrangementer. Én stemme per enhet, live resultater og eksport.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.tvela.no/#products"
+            },
+            "creator": { "@id": "https://www.tvela.no/#business" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <noscript>
+      Tvela AS i Fagernes leverer systemutvikling, webutvikling og
+      innholdsproduksjon. Kontakt oss på hei@tvela.no eller +47 959 61 415.
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -23,24 +23,27 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-emerald-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Tvela AS på GitHub"
               >
-                <Github size={20} />
+                <Github size={20} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/company/tvela-as/"
                 className="text-gray-400 hover:text-emerald-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Tvela AS på LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin size={20} aria-hidden="true" />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100085235652093"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-emerald-400 transition-colors"
+                aria-label="Tvela AS på Facebook"
               >
-                <Facebook size={20} />
+                <Facebook size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -101,7 +104,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start space-x-3">
                 <Phone className="text-emerald-400 mt-1" size={20} />
                 <a
-                  href="tel:+47 959 61 415"
+                  href="tel:+4795961415"
                   className="text-gray-300 hover:text-emerald-400 transition-colors"
                 >
                   +47 959 61 415
@@ -126,14 +129,11 @@ const Footer: React.FC = () => {
               © {new Date().getFullYear()} Tvela AS. Alle rettigheter reservert.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors text-sm">
+              <a
+                href="#personvern"
+                className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
+              >
                 Personvern
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors text-sm">
-                Vilkår
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors text-sm">
-                Cookies
               </a>
             </div>
           </div>

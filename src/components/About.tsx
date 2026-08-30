@@ -35,12 +35,16 @@ const About: React.FC = () => {
     {
       icon: <Cpu size={24} />,
       title: "Moderne Teknologi",
-      description: "Bruk av nyeste verktøy og de nyesterammeverk"
+      description: "Bruk av nyeste verktøy og rammeverk"
     }
   ];
 
   return (
-    <section id='about' className='py-20 bg-navy-950 text-white relative overflow-hidden'>
+    <section
+      id='about'
+      className='py-20 bg-navy-950 text-white relative overflow-hidden'
+      aria-labelledby='about-heading'
+    >
       {/* Animated background elements */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]' />
@@ -51,12 +55,18 @@ const About: React.FC = () => {
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
           <div>
-            <h2 className='text-3xl md:text-4xl font-bold mb-6 text-emerald-400'>Om Tvela AS</h2>
+            <h2
+              id='about-heading'
+              className='text-3xl md:text-4xl font-bold mb-6 text-emerald-400'
+            >
+              Om Tvela AS
+            </h2>
             <div className='w-20 h-1 bg-emerald-500 mb-8'></div>
 
             <p className='text-gray-300 mb-6 text-lg'>
-              Tvela AS er en ledende leverandør av system- og applikasjonsutvikling, innholdsproduksjon 
-              og innholdshåndtering, dedikert til å skape innovative digitale løsninger for bedrifter.
+              Tvela AS er et byrå i Fagernes som leverer system- og
+              applikasjonsutvikling, webutvikling, innholdsproduksjon og
+              innholdshåndtering for bedrifter i Valdres og resten av Norge.
             </p>
 
             <p className='text-gray-300 mb-10'>
@@ -77,6 +87,7 @@ const About: React.FC = () => {
                     <CheckCircle
                       className='text-emerald-500 mt-1 mr-2 flex-shrink-0'
                       size={18}
+                      aria-hidden='true'
                     />
                     <span>{item}</span>
                   </div>

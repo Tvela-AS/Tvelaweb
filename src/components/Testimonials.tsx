@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 const Testimonials: React.FC = () => {
   const testimonials = [
      {
-      quote: "Vi benyttet Tvela med utvikling og vedlikehold av vår nye webside. Tvela gjorde dette arbeide pro-bono for oss, og vi er svært fornøyd med resultatet. Anbefales!",
+      quote: "Vi benyttet Tvela med utvikling og vedlikehold av vår nye webside. Tvela gjorde dette arbeidet pro-bono for oss, og vi er svært fornøyd med resultatet. Anbefales!",
       author: "Viken Search And Rescue",
       role: "Frivillig søk og redningstjeneste",
       rating: 5,
@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
       image: "/img/lillian.jpg"
     },
      {
-      quote: "Jeg benyttet Tvela med utvikling av hjemmesiden en ny og oppdaert webside for JL Fotografi. Tvela var hele tiden raske med tilbakemeldinger og forbedringer etter mine ønsker, og var hele tiden på ballen. Anbefales veldig!",
+      quote: "Jeg benyttet Tvela med utvikling av en ny og oppdatert webside for JL Fotografi. Tvela var hele tiden raske med tilbakemeldinger og forbedringer etter mine ønsker, og var hele tiden på ballen. Anbefales veldig!",
       author: "JL Fotografi",
       role: "Fotograf og innholdsprodusent",
       rating: 5,
@@ -28,7 +28,11 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-navy-950 text-white relative overflow-hidden">
+    <section
+      id="testimonials"
+      className="py-20 bg-navy-950 text-white relative overflow-hidden"
+      aria-labelledby="testimonials-heading"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
@@ -38,7 +42,10 @@ const Testimonials: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
+          <h2
+            id="testimonials-heading"
+            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+          >
             Hva Våre Kunder Sier
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
@@ -63,7 +70,11 @@ const Testimonials: React.FC = () => {
                   <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-emerald-500/50">
                     <img
                       src={testimonial.image}
-                      alt={testimonial.author}
+                      alt={`Portrett eller logo for ${testimonial.author}`}
+                      loading="lazy"
+                      decoding="async"
+                      width={96}
+                      height={96}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -85,7 +96,9 @@ const Testimonials: React.FC = () => {
                   />
                 ))}
               </div>
-              <p className="text-gray-300 italic">"{testimonial.quote}"</p>
+              <blockquote className="text-gray-300 italic">
+                <p>"{testimonial.quote}"</p>
+              </blockquote>
             </div>
           ))}
         </div>

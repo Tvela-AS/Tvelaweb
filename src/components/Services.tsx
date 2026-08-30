@@ -47,7 +47,11 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-navy-950 text-white relative overflow-hidden">
+    <section
+      id="services"
+      className="py-20 bg-navy-950 text-white relative overflow-hidden"
+      aria-labelledby="services-heading"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
@@ -57,11 +61,15 @@ const Services: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
+          <h2
+            id="services-heading"
+            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+          >
             Våre Tjenester
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Vi leverer skreddersydde digitale løsninger, innholdsproduksjon og markedsføringstjenester som møter dine forretningsbehov
+            Skreddersydd systemutvikling, webutvikling, innholdsproduksjon og
+            markedsføring for bedrifter i Valdres og Norge.
           </p>
         </div>
 
@@ -71,7 +79,7 @@ const Services: React.FC = () => {
               key={index}
               className="bg-navy-800/50 p-6 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors"
             >
-              <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4">
+              <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4" aria-hidden="true">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-2 text-emerald-400">

@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: "Hjem", href: "#" },
+    { name: "Hjem", href: "#top" },
     { name: "Tjenester", href: "#services" },
     { name: "Produkter", href: "#products" },
     { name: "Prosjekter", href: "#portfolio" },
@@ -25,6 +25,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
+      aria-label="Hovedmeny"
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-navy-950/80 backdrop-blur-xl border-b border-white/10"
@@ -34,8 +35,15 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold text-white">
-              <img src="/img/logo-nobackground-5000.png" alt="Tvela Logo" className="w-60 h-50" />
+            <a href="#top" className="inline-block">
+              <img
+                src="/img/logo-nobackground-5000.png"
+                alt="Tvela AS"
+                width={240}
+                height={80}
+                className="w-60 h-auto"
+                fetchPriority="high"
+              />
             </a>
           </div>
 
@@ -63,8 +71,12 @@ const Navbar: React.FC = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white focus:outline-none"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              aria-label={isOpen ? "Lukk meny" : "Åpne meny"}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -74,7 +86,10 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-navy-950/95 backdrop-blur-xl border-b border-white/10">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-navy-950/95 backdrop-blur-xl border-b border-white/10"
+        >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <a

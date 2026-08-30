@@ -42,7 +42,11 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-navy-950 text-white relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 bg-navy-950 text-white relative overflow-hidden"
+      aria-labelledby="contact-heading"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
@@ -52,7 +56,10 @@ const Contact: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400">
+          <h2
+            id="contact-heading"
+            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+          >
             Kontakt Oss
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
@@ -71,9 +78,9 @@ const Contact: React.FC = () => {
               forretningsutvikling.
             </p>
 
-            <div className="space-y-6">
+            <address className="not-italic space-y-6">
               <div className="flex items-start space-x-4">
-                <Mail className="text-emerald-400 mt-1" size={20} />
+                <Mail className="text-emerald-400 mt-1" size={20} aria-hidden="true" />
                 <div>
                   <h4 className="font-medium text-white">E-post</h4>
                   <a
@@ -86,7 +93,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <Phone className="text-emerald-400 mt-1" size={20} />
+                <Phone className="text-emerald-400 mt-1" size={20} aria-hidden="true" />
                 <div>
                   <h4 className="font-medium text-white">Telefon</h4>
                   <a
@@ -99,7 +106,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <MapPin className="text-emerald-400 mt-1" size={20} />
+                <MapPin className="text-emerald-400 mt-1" size={20} aria-hidden="true" />
                 <div>
                   <h4 className="font-medium text-white">Adresse</h4>
                   <p className="text-gray-300">
@@ -109,11 +116,16 @@ const Contact: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </address>
           </div>
 
           <div className="bg-navy-800/50 p-8 rounded-xl border border-white/10">
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              aria-label="Kontaktskjema"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                   Navn
@@ -122,6 +134,7 @@ const Contact: React.FC = () => {
                   type="text"
                   id="name"
                   name="name"
+                  autoComplete="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -138,6 +151,7 @@ const Contact: React.FC = () => {
                   type="email"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -185,13 +199,13 @@ const Contact: React.FC = () => {
               </button>
 
               {status.submitted && (
-                <p className="text-emerald-400 text-center">
+                <p className="text-emerald-400 text-center" role="status">
                   Takk for din melding! Vi vil kontakte deg snart.
                 </p>
               )}
 
               {status.error && (
-                <p className="text-red-400 text-center">
+                <p className="text-red-400 text-center" role="alert">
                   Beklager, det oppstod en feil. Vennligst prøv igjen senere.
                 </p>
               )}
