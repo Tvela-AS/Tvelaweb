@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="text-emerald-400 mt-1" size={20} />
                 <span className="text-gray-300">
-                  Jernbanevegen 6<br />
+                  Valdresvegen 6<br />
                   2900 Fagernes
                 </span>
               </li>
