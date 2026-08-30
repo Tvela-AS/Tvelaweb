@@ -16,8 +16,7 @@ const projects: Project[] = [
     id: 1,
     title: "Webside med CMS og Trafikkmonitor",
     category: "System Development",
-    image:
-      "https://images.unsplash.com/photo-1745935817542-b2c55033a6af?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/satch.png",
     description:
       "Leveranse av webside med Sanity CMS og Trafikkmonitor samt produktbilder og profileringsbilder for Hundesalongen i Valdres.",
     tags: [
@@ -35,8 +34,7 @@ const projects: Project[] = [
     id: 2,
     title: "FagernesAppen - Fagernes Handelsstand",
     category: "Mobile Development",
-    image:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/img/fagernes-appen.jpg",
     description:
       "En engen by-app for Fagernes i Valdres. Appen er laget for å spre budskapet om arrangementer, bedrifter og forretninger til turister og fastboende.",
     tags: ["Next.js", "TypeScript", "Expo", "PostgreSQL", "React"],
@@ -46,8 +44,7 @@ const projects: Project[] = [
     id: 3,
     title: "Webside - UAS Valdres",
     category: "Web Development",
-    image:
-      "https://images.unsplash.com/photo-1745938606854-bd00587cc042?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/uas-valdres.jpg",
     description:
       "Custom webside bygget i React med Typscript for dronefirmaet UAS-valdres. Kjører på våre interne servere og holdes oppgradert av automatiserte prosesser.",
     tags: ["React", "Typescript", "NodeJS", "Vercel", "MsSQL", "EmailJS"],
@@ -57,8 +54,7 @@ const projects: Project[] = [
     id: 4,
     title: "VSAR - Viken Search And Rescue",
     category: "Web Development",
-    image:
-      "https://images.unsplash.com/photo-1745939313315-cdfe7a7fc028?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/vsar.jpg",
     description:
       "VSAR fikk utviklet sin nye webløsning hos oss med tilhørende database for savnede personer og medlemsinnlogging.",
     tags: [
@@ -76,8 +72,7 @@ const projects: Project[] = [
     id: 5,
     title: "Øie Trafikkskole",
     category: "Web Development",
-    image:
-      "https://images.unsplash.com/photo-1745941313272-5b2c7cd52f78?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/oie-trafikkskole.jpg",
     description:
       "Øie Trafikkskole var vår første fulle kunde innen webdesign. Websiden deres er levert i Wordpress CMS med spesialtilpasset design, bookingløsning for trafikkskoler og kontaktskjema.",
     tags: [
