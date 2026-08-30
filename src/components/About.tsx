@@ -35,7 +35,7 @@ const About: React.FC = () => {
     {
       icon: <Cpu size={24} />,
       title: "Moderne Teknologi",
-      description: "Bruk av nyeste verktøy og rammeverk"
+      description: "Bruk av nyeste verktøy og de nyesterammeverk"
     }
   ];
 
