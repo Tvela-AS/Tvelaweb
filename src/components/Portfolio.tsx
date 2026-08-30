@@ -13,6 +13,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 8,
+    title: "Folkejury – Norsk Rakfiskfestival",
+    category: "System Development",
+    image: "/img/rakfisk-logo.png",
+    description:
+      "Digital avstemningsløsning for Folkejuryen under Norsk Rakfiskfestival på Fagernes. Publikum stemmer på årets beste rakfisk via en skreddersydd webapp.",
+    tags: ["Next.js", "TypeScript", "React", "Vercel"],
+    url: "https://rakfiskvote.vercel.app/",
+  },
+  {
     id: 1,
     title: "Webside med CMS og Trafikkmonitor",
     category: "System Development",

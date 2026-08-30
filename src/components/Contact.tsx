@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                   <h4 className="font-medium text-white">Adresse</h4>
                   <p className="text-gray-300">
                     Tvela AS<br />
-                    Jernbanevegen 6<br />
+                    Valdresvegen 6<br />
                     2900 Fagernes
                   </p>
                 </div>
