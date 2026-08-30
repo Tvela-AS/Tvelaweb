@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import Products from "./components/Products";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
@@ -20,6 +21,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Products />
         <Portfolio />
         <About />
         <Testimonials />

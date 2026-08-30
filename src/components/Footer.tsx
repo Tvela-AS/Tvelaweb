@@ -78,6 +78,11 @@ const Footer: React.FC = () => {
                   Innholdshåndtering
                 </a>
               </li>
+              <li>
+                <a href="#products" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Folkejury
+                </a>
+              </li>
             </ul>
           </div>
 
