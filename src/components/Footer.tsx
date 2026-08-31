@@ -86,6 +86,11 @@ const Footer: React.FC = () => {
                   Folkejury
                 </a>
               </li>
+              <li>
+                <a href="#products" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Tvela Contest
+                </a>
+              </li>
             </ul>
           </div>
 
