@@ -1,147 +1,89 @@
 import React from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Facebook } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-navy-950 text-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-16">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-ink-950 text-parchment-200">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 py-16 md:grid-cols-3">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Tvela AS</h3>
-            <p className="text-gray-300 mb-4">
-              Vi skaper innovative digitale løsninger, engasjerende innhold og effektive markedsføringsstrategier som driver forretningsutvikling.
+            <h3 className="mb-4 font-serif text-xl text-parchment-50">Tvela AS</h3>
+            <p className="mb-6 max-w-sm leading-relaxed text-parchment-400">
+              Diskret IT-sikkerhet, digital gransking og privatetterforskning –
+              fra Fagernes.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <a
                 href="https://github.com/Tvela-AS"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-parchment-400 hover:text-brass-300"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Tvela AS på GitHub"
               >
-                <Github size={20} aria-hidden="true" />
+                <Github size={18} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/company/tvela-as/"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-parchment-400 hover:text-brass-300"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Tvela AS på LinkedIn"
               >
-                <Linkedin size={20} aria-hidden="true" />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100085235652093"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
-                aria-label="Tvela AS på Facebook"
-              >
-                <Facebook size={20} aria-hidden="true" />
+                <Linkedin size={18} aria-hidden="true" />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Tjenester</h3>
+            <h3 className="mb-4 font-serif text-xl text-parchment-50">Tjenester</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Fullstack Utvikling
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Systemutvikling
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Webutvikling
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Mobilapplikasjoner
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Innholdsproduksjon
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Innholdshåndtering
-                </a>
-              </li>
-              <li>
-                <a href="#products" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Folkejury
-                </a>
-              </li>
-              <li>
-                <a href="#products" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Tvela Contest
-                </a>
-              </li>
+              {[
+                "IT-sikkerhet",
+                "Ethical hacking",
+                "Digital gransking",
+                "Privatetterforskning",
+              ].map((item) => (
+                <li key={item}>
+                  <a href="#services" className="hover:text-brass-300">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Kontakt</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <Mail className="text-emerald-400 mt-1" size={20} />
-                <a
-                  href="mailto:hei@tvela.no"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
-                >
+            <h3 className="mb-4 font-serif text-xl text-parchment-50">Kontakt</h3>
+            <ul className="space-y-3">
+              <li className="flex gap-3">
+                <Mail size={18} className="mt-0.5 text-brass-400" aria-hidden="true" />
+                <a href="mailto:hei@tvela.no" className="hover:text-brass-300">
                   hei@tvela.no
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <Phone className="text-emerald-400 mt-1" size={20} />
-                <a
-                  href="tel:+4795961415"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
-                >
+              <li className="flex gap-3">
+                <Phone size={18} className="mt-0.5 text-brass-400" aria-hidden="true" />
+                <a href="tel:+4795961415" className="hover:text-brass-300">
                   +47 959 61 415
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="text-emerald-400 mt-1" size={20} />
-                <span className="text-gray-300">
-                  Valdresvegen 6<br />
+              <li className="flex gap-3">
+                <MapPin size={18} className="mt-0.5 text-brass-400" aria-hidden="true" />
+                <span>
+                  Valdresvegen 6
+                  <br />
                   2900 Fagernes
                 </span>
               </li>
             </ul>
           </div>
-
-          
         </div>
 
-        <div className="border-t border-white/10 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Tvela AS. Alle rettigheter reservert.
-            </p>
-            <div className="flex space-x-6">
-              <a
-                href="#personvern"
-                className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
-              >
-                Personvern
-              </a>
-            </div>
-          </div>
+        <div className="flex flex-col items-start justify-between gap-4 border-t border-white/10 py-8 text-sm text-parchment-400 md:flex-row md:items-center">
+          <p>© {new Date().getFullYear()} Tvela AS. Alle rettigheter reservert.</p>
+          <a href="#personvern" className="hover:text-brass-300">
+            Personvern
+          </a>
         </div>
       </div>
     </footer>

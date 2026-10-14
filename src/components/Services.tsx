@@ -1,98 +1,100 @@
 import React from "react";
-import { Code, Server, Database, Globe, Smartphone, Cloud, Camera, Megaphone } from "lucide-react";
+import { Eye, Fingerprint, Scale, Shield } from "lucide-react";
+import SectionFrame from "./ui/SectionFrame";
+
+const services = [
+  {
+    icon: <Shield size={22} />,
+    title: "IT-sikkerhet",
+    points: [
+      "Uavhengig vurdering av sikkerhetsnivå og risiko",
+      "Råd til styre og ledelse, på et språk som gir beslutning",
+      "Sikkerhet i systemer, nettverk, identitet og sky",
+      "Beredskap og rolig håndtering når noe har skjedd",
+      "Bevissthet og internkontroll i organisasjonen",
+      "Støtte til etterlevelse, leverandørkrav og dokumentasjon",
+    ],
+  },
+  {
+    icon: <Scale size={22} />,
+    title: "Ethical hacking",
+    points: [
+      "Autorisert inntrengingstesting etter skriftlig fullmakt",
+      "Kontrollerte tester av systemer, nettverk og tilgangsstyring",
+      "Avtalt omfang. Ingen arbeid utenfor rammen",
+      "Tydelig rapport til ledelse, med prioriterte funn",
+      "Konkrete anbefalinger og oppfølging av tiltak",
+      "Kontrollerte beredskapstester etter avtalt scenario",
+    ],
+  },
+  {
+    icon: <Fingerprint size={22} />,
+    title: "Digital gransking",
+    points: [
+      "Sikring og analyse av digitale spor",
+      "Gransking ved mistanke om misbruk, lekkasje eller uredelighet",
+      "Faglig støtte til internundersøkelser",
+      "Dokumentasjon som tåler etterprøving",
+      "Samarbeid med advokat, HR og internrevisjon",
+      "Bistand etter datainnbrudd eller tap av data",
+    ],
+  },
+  {
+    icon: <Eye size={22} />,
+    title: "Privatetterforskning",
+    points: [
+      "Lovlige og diskrete oppdrag for virksomheter",
+      "Faktaopplysning til styre, HR og advokat",
+      "Undersøkelser ved intern uro, mistanke eller integritetsspørsmål",
+      "Innhenting fra åpne og lovlige kilder",
+      "Bakgrunn og relasjoner, der det er saklig grunn",
+      "Rapport som gir grunnlag for neste steg",
+    ],
+  },
+];
 
 const Services: React.FC = () => {
-  const services = [
-    {
-      icon: <Code size={24} />,
-      title: "Fullstack Utvikling",
-      description: "Komplette løsninger med moderne frontend og robust backend"
-    },
-    {
-      icon: <Server size={24} />,
-      title: "Systemutvikling",
-      description: "Skalerbare systemer og applikasjoner for bedrifter"
-    },
-    {
-      icon: <Camera size={24} />,
-      title: "Innholdsproduksjon",
-      description: "Profesjonell foto, video og designtjenester for din bedrift"
-    },
-    {
-      icon: <Megaphone size={24} />,
-      title: "Innholdshåndtering",
-      description: "Markedsføring, annonsering og content management"
-    },
-    {
-      icon: <Database size={24} />,
-      title: "Database Design",
-      description: "Optimaliserte databaser og datahåndteringsløsninger"
-    },
-    {
-      icon: <Globe size={24} />,
-      title: "Webutvikling",
-      description: "Moderne og responsive nettsteder med fokus på brukeropplevelse"
-    },
-    {
-      icon: <Smartphone size={24} />,
-      title: "Mobilapplikasjoner",
-      description: "Native og cross-platform mobilapplikasjoner"
-    },
-    {
-      icon: <Cloud size={24} />,
-      title: "Cloud Løsninger",
-      description: "Skytjenester og cloud-infrastruktur"
-    },
-    
-  ];
-
   return (
-    <section
-      id="services"
-      className="py-20 bg-navy-950 text-white relative overflow-hidden"
-      aria-labelledby="services-heading"
-    >
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+    <SectionFrame id="services" labelledBy="services-heading" className="bg-ink-950">
+      <div className="mx-auto mb-16 max-w-2xl text-center">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brass-400">
+          Fagområder
+        </p>
+        <h2
+          id="services-heading"
+          className="mb-4 text-3xl font-semibold text-parchment-50 md:text-4xl"
+        >
+          Tjenester
+        </h2>
+        <p className="text-lg leading-relaxed text-parchment-200/85">
+          Fire fagområder. Ett kontaktpunkt. Alltid innenfor loven.
+        </p>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2
-            id="services-heading"
-            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+      <div className="grid gap-6 md:grid-cols-2">
+        {services.map((service) => (
+          <article
+            key={service.title}
+            className="border border-white/10 bg-ink-900/50 p-8 hover:border-brass-400/30"
           >
-            Våre Tjenester
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Skreddersydd systemutvikling, webutvikling, innholdsproduksjon og
-            markedsføring for bedrifter i Valdres og Norge.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-navy-800/50 p-6 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors"
-            >
-              <div className="p-3 bg-emerald-500/10 rounded-lg w-fit mb-4" aria-hidden="true">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-emerald-400">
-                {service.title}
-              </h3>
-              <p className="text-gray-300">
-                {service.description}
-              </p>
+            <div className="mb-5 inline-flex border border-brass-400/20 bg-brass-500/10 p-2.5 text-brass-300" aria-hidden="true">
+              {service.icon}
             </div>
-          ))}
-        </div>
+            <h3 className="mb-5 font-serif text-2xl font-semibold text-parchment-50">
+              {service.title}
+            </h3>
+            <ul className="space-y-2.5 text-[15px] leading-relaxed text-parchment-200/80">
+              {service.points.map((point) => (
+                <li key={point} className="flex gap-3">
+                  <span className="mt-2 h-px w-3 shrink-0 bg-brass-400/70" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
-    </section>
+    </SectionFrame>
   );
 };
 
