@@ -22,7 +22,7 @@ const projects: Project[] = [
     description:
       "Digital avstemningsløsning for Folkejuryen under Norsk Rakfiskfestival på Fagernes. Publikum stemmer på årets beste rakfisk via en skreddersydd webapp.",
     tags: ["Next.js", "TypeScript", "React", "Vercel"],
-    url: "https://rakfiskvote.vercel.app/",
+    url: "",
   },
   {
     id: 1,
