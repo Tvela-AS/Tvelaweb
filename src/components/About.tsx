@@ -4,10 +4,10 @@ import { CheckCircle, Code, Server, Database, Zap, Cpu } from "lucide-react";
 const About: React.FC = () => {
   const whyChooseUs = [
     "Erfarne utviklere",
-    "Moderne teknologistakk",
+    "Innhold og design i samme hus",
+    "Innholdshåndtering og annonsering",
     "Skalerbare løsninger",
     "Dedikerte utviklingsteam",
-    "Agile utviklingsmetodikk",
     "Kontinuerlig leveranse",
   ];
 
@@ -64,18 +64,18 @@ const About: React.FC = () => {
             <div className='w-20 h-1 bg-emerald-500 mb-8'></div>
 
             <p className='text-gray-300 mb-6 text-lg'>
-              Tvela AS er et utviklingsbyrå i Fagernes som leverer
-              systemutvikling, webutvikling og apputvikling til bedrifter i
-              hele Norge. Vi bygger nettsider, systemer og apper som skal tåle
-              vekst – ikke bare se bra ut ved lansering.
+              Tvela Utvikling er mer enn et rent utviklingsbyrå. Vi leverer
+              systemutvikling, webutvikling og apputvikling – og i tillegg
+              innhold og innholdshåndtering. Nettsider, systemer og apper
+              bygges for vekst, med foto, video og design som følger med.
             </p>
 
             <p className='text-gray-300 mb-10'>
-              Selskapet ble etablert i 2021. Vi jobber med kunder i Valdres og
-              nasjonalt, med digitale møter og leveranse uavhengig av hvor dere
-              sitter. Teamet dekker programvareutvikling, innholdsproduksjon og
-              digital markedsføring, slik at webutvikling og systemutvikling
-              henger sammen med innholdet dere faktisk publiserer.
+              Selskapet ble etablert i 2021 i Fagernes. Vi jobber med kunder i
+              Valdres og nasjonalt. Teamet dekker programvareutvikling,
+              innholdsproduksjon (foto, video, design) og innholdshåndtering
+              (annonsering og løpende oppfølging), slik at teknologien henger
+              sammen med innholdet dere faktisk publiserer.
             </p>
 
             <div className='mb-8'>

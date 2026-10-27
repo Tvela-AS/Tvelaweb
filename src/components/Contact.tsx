@@ -1,8 +1,46 @@
 import React, { useState, useRef } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { divisions, type DivisionId } from "../lib/divisions";
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  variant?: DivisionId;
+}
+
+const contactCopy: Record<
+  DivisionId,
+  { intro: string; heading: string; body: string }
+> = {
+  utvikling: {
+    intro:
+      "Trenger dere webutvikling, systemutvikling, innhold eller innholdshåndtering? Vi tar oppdrag i hele Norge. Send en melding, så avklarer vi omfanget.",
+    heading: "Start et prosjekt",
+    body: "Fortell kort om nettsiden, systemet, appen eller innholdet dere trenger. Vi leverer utvikling og innholdshåndtering – uansett om dere sitter i Oslo, Bergen, Trondheim eller et annet sted i Norge.",
+  },
+  sikkerhet: {
+    intro:
+      "Trenger dere IT-sikkerhet, testing eller gransking? Send en kort, fortrolig melding – så avklarer vi omfanget.",
+    heading: "Fortrolig henvendelse",
+    body: "Kort beskrivelse holder. Vi avklarer resten sammen – alltid innenfor avtalt ramme og fullmakt.",
+  },
+  nettverk: {
+    intro:
+      "Trenger dere bedriftsnett, Wi-Fi, brannmur eller drift av infrastruktur? Send en melding, så ser vi på behovet.",
+    heading: "Start en nettverkssamtale",
+    body: "Fortell kort om lokaler, antall brukere og hva som ikke fungerer i dag. Vi kartlegger og foreslår en konkret løsning.",
+  },
+  konsulent: {
+    intro:
+      "Trenger dere IT-rådgivning, prosjektbistand eller ekstra kapasitet? Send en melding, så avklarer vi hvordan vi kan hjelpe.",
+    heading: "Book en prat",
+    body: "Kort beskrivelse av situasjonen er nok. Vi kommer tilbake med forslag til bistand – timer, prosjekt eller sparring.",
+  },
+};
+
+const Contact: React.FC<ContactProps> = ({ variant = "utvikling" }) => {
+  const theme = divisions[variant];
+  const copy = contactCopy[variant];
+
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -47,46 +85,42 @@ const Contact: React.FC = () => {
       className="py-20 bg-navy-950 text-white relative overflow-hidden"
       aria-labelledby="contact-heading"
     >
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div
+          className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent to-transparent ${theme.accentVia}`}
+        />
+        <div
+          className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent to-transparent ${theme.accentVia}`}
+        />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2
             id="contact-heading"
-            className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
+            className={`text-3xl md:text-4xl font-bold mb-4 ${theme.accentText}`}
           >
             Kontakt Oss
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Trenger dere webutvikling, systemutvikling eller en app? Vi tar
-            oppdrag i hele Norge. Send en melding, så avklarer vi omfanget.
-          </p>
+          <p className="text-gray-300 max-w-2xl mx-auto">{copy.intro}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-emerald-400">
-              Start et prosjekt
+            <h3 className={`text-2xl font-bold mb-6 ${theme.accentText}`}>
+              {copy.heading}
             </h3>
-            <p className="text-gray-300 mb-8">
-              Fortell kort om nettsiden, systemet eller appen dere trenger. Vi
-              leverer skreddersydd webutvikling og systemutvikling, uansett om
-              dere sitter i Oslo, Bergen, Trondheim eller et annet sted i Norge.
-            </p>
+            <p className="text-gray-300 mb-8">{copy.body}</p>
 
             <address className="not-italic space-y-6">
               <div className="flex items-start space-x-4">
-                <Mail className="text-emerald-400 mt-1" size={20} aria-hidden="true" />
+                <Mail className={`${theme.accentIcon} mt-1`} size={20} aria-hidden="true" />
                 <div>
                   <h4 className="font-medium text-white">E-post</h4>
                   <a
                     href="mailto:hei@tvela.no"
-                    className="text-gray-300 hover:text-emerald-400 transition-colors"
+                    className={`text-gray-300 transition-colors ${theme.accentHover}`}
                   >
                     hei@tvela.no
                   </a>
@@ -94,12 +128,12 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <Phone className="text-emerald-400 mt-1" size={20} aria-hidden="true" />
+                <Phone className={`${theme.accentIcon} mt-1`} size={20} aria-hidden="true" />
                 <div>
                   <h4 className="font-medium text-white">Telefon</h4>
                   <a
                     href="tel:+4795961415"
-                    className="text-gray-300 hover:text-emerald-400 transition-colors"
+                    className={`text-gray-300 transition-colors ${theme.accentHover}`}
                   >
                     +47 959 61 415
                   </a>
@@ -107,7 +141,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <MapPin className="text-emerald-400 mt-1" size={20} aria-hidden="true" />
+                <MapPin className={`${theme.accentIcon} mt-1`} size={20} aria-hidden="true" />
                 <div>
                   <h4 className="font-medium text-white">Adresse</h4>
                   <p className="text-gray-300">
@@ -139,7 +173,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  className={`w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 text-white ${theme.accentFocus}`}
                   placeholder="Ditt navn"
                 />
               </div>
@@ -156,7 +190,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white"
+                  className={`w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 text-white ${theme.accentFocus}`}
                   placeholder="din.epost@eksempel.no"
                 />
               </div>
@@ -172,7 +206,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white resize-none"
+                  className={`w-full px-4 py-2 bg-navy-900 border border-white/10 rounded-lg focus:outline-none focus:ring-2 text-white resize-none ${theme.accentFocus}`}
                   placeholder="Fortell oss om ditt prosjekt..."
                 />
               </div>
@@ -180,10 +214,12 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={status.submitting}
-                className={`w-full bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                className={`w-full px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                  theme.ctaClass
+                } ${
                   status.submitting
                     ? 'opacity-50 cursor-not-allowed'
-                    : 'hover:bg-emerald-600 hover:scale-105'
+                    : 'hover:scale-105'
                 }`}
               >
                 {status.submitting ? (
@@ -200,7 +236,7 @@ const Contact: React.FC = () => {
               </button>
 
               {status.submitted && (
-                <p className="text-emerald-400 text-center" role="status">
+                <p className={`text-center ${theme.accentText}`} role="status">
                   Takk for din melding! Vi vil kontakte deg snart.
                 </p>
               )}

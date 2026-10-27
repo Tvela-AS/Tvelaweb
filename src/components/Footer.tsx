@@ -1,27 +1,43 @@
 import React from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  divisionList,
+  divisions,
+  serviceLinksByDivision,
+  type DivisionId,
+} from "../lib/divisions";
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  variant?: DivisionId;
+}
+
+const Footer: React.FC<FooterProps> = ({ variant = "utvikling" }) => {
+  const theme = divisions[variant];
+  const serviceLinks = serviceLinksByDivision[variant];
+  const showFaq = variant === "utvikling";
+
   return (
-    <footer className="bg-navy-950 text-white relative overflow-hidden">
-      {/* Animated background elements */}
+    <footer className="relative overflow-hidden bg-navy-950 text-white">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div
+          className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent ${theme.accentVia}`}
+        />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-16">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Tvela AS</h3>
-            <p className="text-gray-300 mb-4">
-              Systemutvikling og webutvikling for bedrifter i hele Norge, fra
-              Fagernes. Nettsider, systemer, apper og innhold.
-            </p>
+            <h3 className={`mb-4 text-xl font-bold ${theme.accentText}`}>
+              Tvela AS
+            </h3>
+            <p className="mb-4 text-gray-300">{theme.blurb}</p>
+            <p className="mb-4 text-sm text-gray-400">Org.nr. 931 018 701</p>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/Tvela-AS"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className={`text-gray-400 transition-colors ${theme.accentHover}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Tvela AS på GitHub"
@@ -30,7 +46,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="https://www.linkedin.com/company/tvela-as/"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className={`text-gray-400 transition-colors ${theme.accentHover}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Tvela AS på LinkedIn"
@@ -41,7 +57,7 @@ const Footer: React.FC = () => {
                 href="https://www.facebook.com/profile.php?id=100085235652093"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className={`text-gray-400 transition-colors ${theme.accentHover}`}
                 aria-label="Tvela AS på Facebook"
               >
                 <Facebook size={20} aria-hidden="true" />
@@ -50,100 +66,114 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Tjenester</h3>
+            <h3 className={`mb-4 text-xl font-bold ${theme.accentText}`}>
+              Tjenester
+            </h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#webutvikling" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Webutvikling
-                </a>
-              </li>
-              <li>
-                <a href="#systemutvikling" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Systemutvikling
-                </a>
-              </li>
-              <li>
-                <a href="#fullstack" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Fullstack utvikling
-                </a>
-              </li>
-              <li>
-                <a href="#apputvikling" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Apputvikling
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Innholdsproduksjon
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Innholdshåndtering
-                </a>
-              </li>
-              <li>
-                <a href="#products" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Folkejury
-                </a>
-              </li>
-              <li>
-                <a href="#products" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Tvela Contest
-                </a>
-              </li>
+              {serviceLinks.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className={`text-gray-300 transition-colors ${theme.accentHover}`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">Kontakt</h3>
+            <h3 className={`mb-4 text-xl font-bold ${theme.accentText}`}>
+              Divisjoner
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/"
+                  className={`text-gray-300 transition-colors ${theme.accentHover}`}
+                >
+                  Startsiden
+                </Link>
+              </li>
+              {divisionList.map((division) => (
+                <li key={division.id}>
+                  <Link
+                    to={division.path}
+                    className={`text-gray-300 transition-colors ${theme.accentHover}`}
+                  >
+                    {division.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className={`mb-4 text-xl font-bold ${theme.accentText}`}>
+              Kontakt
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <Mail className="text-emerald-400 mt-1" size={20} />
+                <Mail
+                  className={`${theme.accentIcon} mt-1`}
+                  size={20}
+                  aria-hidden="true"
+                />
                 <a
                   href="mailto:hei@tvela.no"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className={`text-gray-300 transition-colors ${theme.accentHover}`}
                 >
                   hei@tvela.no
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone className="text-emerald-400 mt-1" size={20} />
+                <Phone
+                  className={`${theme.accentIcon} mt-1`}
+                  size={20}
+                  aria-hidden="true"
+                />
                 <a
                   href="tel:+4795961415"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className={`text-gray-300 transition-colors ${theme.accentHover}`}
                 >
                   +47 959 61 415
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="text-emerald-400 mt-1" size={20} />
+                <MapPin
+                  className={`${theme.accentIcon} mt-1`}
+                  size={20}
+                  aria-hidden="true"
+                />
                 <span className="text-gray-300">
-                  Valdresvegen 6<br />
+                  Valdresvegen 6
+                  <br />
                   2900 Fagernes
                 </span>
               </li>
             </ul>
           </div>
-
-          
         </div>
 
         <div className="border-t border-white/10 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Tvela AS. Alle rettigheter reservert.
+          <div className="flex flex-col items-center justify-between md:flex-row">
+            <p className="mb-4 text-sm text-gray-400 md:mb-0">
+              © {new Date().getFullYear()} Tvela AS. Alle rettigheter
+              reservert. Org.nr. 931 018 701
             </p>
             <div className="flex space-x-6">
-              <a
-                href="#faq"
-                className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
-              >
-                FAQ
-              </a>
+              {showFaq && (
+                <a
+                  href="#faq"
+                  className={`text-sm text-gray-400 transition-colors ${theme.accentHover}`}
+                >
+                  FAQ
+                </a>
+              )}
               <a
                 href="#personvern"
-                className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
+                className={`text-sm text-gray-400 transition-colors ${theme.accentHover}`}
               >
                 Personvern
               </a>

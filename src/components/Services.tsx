@@ -79,12 +79,12 @@ const Services: React.FC = () => {
             id="services-heading"
             className="text-3xl md:text-4xl font-bold mb-4 text-emerald-400"
           >
-            Webutvikling og systemutvikling
+            Utvikling, innhold og drift
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Vi er et utviklingsbyrå som leverer webutvikling, systemutvikling,
-            apputvikling og fullstack-løsninger til bedrifter i hele Norge.
-            Kontoret ligger i Fagernes. Oppdragene kjører vi nasjonalt.
+            Vi leverer webutvikling, systemutvikling og apper – og innhold
+            (foto, video, design) samt innholdshåndtering med annonsering og
+            oppfølging. Kontor i Fagernes. Oppdrag i hele Norge.
           </p>
         </div>
 

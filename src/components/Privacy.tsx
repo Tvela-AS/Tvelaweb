@@ -1,33 +1,39 @@
 import React from "react";
+import { divisions, type DivisionId } from "../lib/divisions";
 
-const Privacy: React.FC = () => {
+interface PrivacyProps {
+  variant?: DivisionId;
+}
+
+const Privacy: React.FC<PrivacyProps> = ({ variant = "utvikling" }) => {
+  const theme = divisions[variant];
+
   return (
     <section
       id="personvern"
-      className="py-16 bg-navy-950 text-white relative overflow-hidden"
+      className="relative overflow-hidden bg-navy-950 py-16 text-white"
       aria-labelledby="privacy-heading"
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+        <div
+          className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent ${theme.accentVia}`}
+        />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-3xl">
+      <div className="container relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2
           id="privacy-heading"
-          className="text-2xl md:text-3xl font-bold mb-4 text-emerald-400"
+          className={`mb-4 text-2xl font-bold md:text-3xl ${theme.accentText}`}
         >
           Personvern
         </h2>
-        <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+        <div className="space-y-4 text-sm leading-relaxed text-gray-300">
           <p>
             Tvela AS (Valdresvegen 6, 2900 Fagernes) behandler personopplysninger
             for å svare på henvendelser og levere tjenester. Behandlingsansvarlig
             nås på{" "}
-            <a
-              href="mailto:hei@tvela.no"
-              className="text-emerald-400 hover:text-emerald-300"
-            >
+            <a href="mailto:hei@tvela.no" className={theme.accentLink}>
               hei@tvela.no
             </a>
             .

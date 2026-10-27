@@ -1,9 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { divisions, type DivisionId } from "../lib/divisions";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  variant?: DivisionId;
+}
+
+const ctaLabels: Record<DivisionId, string> = {
+  utvikling: "Start Prosjekt",
+  sikkerhet: "Fortrolig samtale",
+  nettverk: "Ta kontakt",
+  konsulent: "Book en prat",
+};
+
+const Navbar: React.FC<NavbarProps> = ({ variant = "utvikling" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const theme = divisions[variant];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,61 +28,72 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { name: "Hjem", href: "#top" },
-    { name: "Tjenester", href: "#services" },
-    { name: "Produkter", href: "#products" },
-    { name: "Prosjekter", href: "#portfolio" },
-    { name: "Om Oss", href: "#about" },
-    { name: "Kontakt", href: "#contact" },
-  ];
+  const navItems =
+    variant === "utvikling"
+      ? [
+          { name: "Hjem", href: "#top" },
+          { name: "Tjenester", href: "#services" },
+          { name: "Produkter", href: "#products" },
+          { name: "Prosjekter", href: "#portfolio" },
+          { name: "Om Oss", href: "#about" },
+          { name: "Kontakt", href: "#contact" },
+        ]
+      : [
+          { name: "Hjem", href: "#top" },
+          { name: "Tjenester", href: "#services" },
+          { name: "Om Oss", href: "#about" },
+          { name: "Kontakt", href: "#contact" },
+        ];
 
   return (
     <nav
       aria-label="Hovedmeny"
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-navy-950/80 backdrop-blur-xl border-b border-white/10"
+          ? "border-b border-white/10 bg-navy-950/80 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
-            <a href="#top" className="inline-block">
+        <div className="flex h-20 items-center justify-between">
+          <div className="flex flex-shrink-0 items-center gap-4">
+            <Link to="/" className="inline-block" aria-label="Tilbake til startsiden">
               <img
                 src="/img/logo-nobackground-5000.png"
-                alt="Tvela AS – systemutvikling og webutvikling"
+                alt={theme.title}
                 width={240}
                 height={80}
-                className="w-60 h-auto"
+                className="h-auto w-52 sm:w-60"
                 fetchPriority="high"
               />
-            </a>
+            </Link>
+            <span
+              className={`hidden rounded-full border px-3 py-1 text-xs font-medium sm:inline-block ${theme.badgeBorder}`}
+            >
+              {theme.label}
+            </span>
           </div>
 
-          {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 transition-colors hover:text-white"
                 >
                   {item.name}
                 </a>
               ))}
               <a
                 href="#contact"
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full transition-colors"
+                className={`${theme.ctaClass} rounded-full px-4 py-2 transition-colors`}
               >
-                Start Prosjekt
+                {ctaLabels[variant]}
               </a>
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               type="button"
@@ -84,18 +109,24 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden bg-navy-950/95 backdrop-blur-xl border-b border-white/10"
+          className="border-b border-white/10 bg-navy-950/95 backdrop-blur-xl md:hidden"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="space-y-1 px-2 pb-3 pt-2">
+            <Link
+              to="/"
+              className="block rounded-md px-3 py-2 text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              Alle divisjoner
+            </Link>
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors"
+                className="block rounded-md px-3 py-2 text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -103,10 +134,10 @@ const Navbar: React.FC = () => {
             ))}
             <a
               href="#contact"
-              className="block px-3 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md transition-colors"
+              className={`block rounded-md px-3 py-2 transition-colors ${theme.ctaClass}`}
               onClick={() => setIsOpen(false)}
             >
-              Start Prosjekt
+              {ctaLabels[variant]}
             </a>
           </div>
         </div>

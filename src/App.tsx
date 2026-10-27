@@ -1,41 +1,25 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Products from "./components/Products";
-import Portfolio from "./components/Portfolio";
-import About from "./components/About";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Faq from "./components/Faq";
-import Privacy from "./components/Privacy";
-import Footer from "./components/Footer";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import Portal from "./pages/Portal";
+import Utvikling from "./pages/Utvikling";
+import Sikkerhet from "./pages/Sikkerhet";
+import Nettverk from "./pages/Nettverk";
+import Konsulent from "./pages/Konsulent";
 
 function App() {
   return (
-    <div className="min-h-screen bg-navy-950">
-      <a
-        href="#main"
-        className="absolute left-4 top-4 z-[60] -translate-y-24 focus:translate-y-0 bg-emerald-500 text-white px-4 py-2 rounded-md font-medium"
-      >
-        Hopp til innhold
-      </a>
-      <Navbar />
-      <main id="main">
-        <Hero />
-        <Services />
-        <Products />
-        <Portfolio />
-        <About />
-        <Testimonials />
-        <Contact />
-        <Faq />
-        <Privacy />
-      </main>
-      <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Portal />} />
+        <Route path="/utvikling" element={<Utvikling />} />
+        <Route path="/sikkerhet" element={<Sikkerhet />} />
+        <Route path="/nettverk" element={<Nettverk />} />
+        <Route path="/konsulent" element={<Konsulent />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <Analytics />
-    </div>
+    </BrowserRouter>
   );
 }
 
