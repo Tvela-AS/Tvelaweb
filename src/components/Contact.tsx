@@ -63,7 +63,8 @@ const Contact: React.FC = () => {
             Kontakt Oss
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            La oss diskutere hvordan vi kan hjelpe deg med å realisere dine digitale prosjekter
+            Trenger dere webutvikling, systemutvikling eller en app? Vi tar
+            oppdrag i hele Norge. Send en melding, så avklarer vi omfanget.
           </p>
         </div>
 
@@ -73,9 +74,9 @@ const Contact: React.FC = () => {
               Start et prosjekt
             </h3>
             <p className="text-gray-300 mb-8">
-              Fortell oss om ditt prosjekt, og vi vil hjelpe deg med å finne den beste løsningen
-              for dine behov. Vi tilbyr skreddersydde systemer og applikasjoner som driver
-              forretningsutvikling.
+              Fortell kort om nettsiden, systemet eller appen dere trenger. Vi
+              leverer skreddersydd webutvikling og systemutvikling, uansett om
+              dere sitter i Oslo, Bergen, Trondheim eller et annet sted i Norge.
             </p>
 
             <address className="not-italic space-y-6">

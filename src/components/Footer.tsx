@@ -15,7 +15,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-emerald-400">Tvela AS</h3>
             <p className="text-gray-300 mb-4">
-              Vi skaper innovative digitale løsninger, engasjerende innhold og effektive markedsføringsstrategier som driver forretningsutvikling.
+              Systemutvikling og webutvikling for bedrifter i hele Norge, fra
+              Fagernes. Nettsider, systemer, apper og innhold.
             </p>
             <div className="flex space-x-4">
               <a
@@ -52,23 +53,23 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4 text-emerald-400">Tjenester</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Fullstack Utvikling
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Systemutvikling
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                <a href="#webutvikling" className="text-gray-300 hover:text-emerald-400 transition-colors">
                   Webutvikling
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-emerald-400 transition-colors">
-                  Mobilapplikasjoner
+                <a href="#systemutvikling" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Systemutvikling
+                </a>
+              </li>
+              <li>
+                <a href="#fullstack" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Fullstack utvikling
+                </a>
+              </li>
+              <li>
+                <a href="#apputvikling" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  Apputvikling
                 </a>
               </li>
               <li>
@@ -134,6 +135,12 @@ const Footer: React.FC = () => {
               © {new Date().getFullYear()} Tvela AS. Alle rettigheter reservert.
             </p>
             <div className="flex space-x-6">
+              <a
+                href="#faq"
+                className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
+              >
+                FAQ
+              </a>
               <a
                 href="#personvern"
                 className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"

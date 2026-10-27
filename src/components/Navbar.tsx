@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
             <a href="#top" className="inline-block">
               <img
                 src="/img/logo-nobackground-5000.png"
-                alt="Tvela AS"
+                alt="Tvela AS – systemutvikling og webutvikling"
                 width={240}
                 height={80}
                 className="w-60 h-auto"

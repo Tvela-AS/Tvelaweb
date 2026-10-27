@@ -245,8 +245,8 @@ const Products: React.FC = () => {
             Våre Produkter
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Egenutviklede løsninger dere kan ta i bruk – ikke bare
-            skreddersøm fra bunnen av.
+            Egenutviklede produkter i tillegg til skreddersydd webutvikling og
+            systemutvikling. Klar til bruk for bedrifter og arrangører i Norge.
           </p>
         </div>
 

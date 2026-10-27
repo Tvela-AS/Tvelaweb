@@ -64,17 +64,18 @@ const About: React.FC = () => {
             <div className='w-20 h-1 bg-emerald-500 mb-8'></div>
 
             <p className='text-gray-300 mb-6 text-lg'>
-              Tvela AS er et byrå i Fagernes som leverer system- og
-              applikasjonsutvikling, webutvikling, innholdsproduksjon og
-              innholdshåndtering for bedrifter i Valdres og resten av Norge.
+              Tvela AS er et utviklingsbyrå i Fagernes som leverer
+              systemutvikling, webutvikling og apputvikling til bedrifter i
+              hele Norge. Vi bygger nettsider, systemer og apper som skal tåle
+              vekst – ikke bare se bra ut ved lansering.
             </p>
 
             <p className='text-gray-300 mb-10'>
-              Grunnlagt i 2021, har vi raskt etablert oss som en pålitelig partner innen programvareutvikling, 
-              innholdsproduksjon og digital markedsføring. Vårt team av erfarne utviklere, fotografer, 
-              videografer og designere jobber tett med kunder for å skape skalerbare systemer, engasjerende 
-              innhold og effektive markedsføringsløsninger. Vi kombinerer moderne teknologi med kreativitet 
-              og best practices for å levere helhetlige løsninger som møter dagens og morgendagens utfordringer.
+              Selskapet ble etablert i 2021. Vi jobber med kunder i Valdres og
+              nasjonalt, med digitale møter og leveranse uavhengig av hvor dere
+              sitter. Teamet dekker programvareutvikling, innholdsproduksjon og
+              digital markedsføring, slik at webutvikling og systemutvikling
+              henger sammen med innholdet dere faktisk publiserer.
             </p>
 
             <div className='mb-8'>

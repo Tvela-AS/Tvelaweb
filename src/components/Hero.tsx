@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
                 <div className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-emerald-400 text-sm font-medium">
-                    Programvare · Innhold · Markedsføring
+                    Systemutvikling · Webutvikling · Norge
                   </span>
                 </div>
               </div>
@@ -32,16 +32,15 @@ const Hero: React.FC = () => {
                 id="hero-heading"
                 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70"
               >
-                Innovativ
-                <span className="block text-emerald-400">Systemutvikling</span>
-                og
-                <span className="block text-emerald-400">Innholdsproduksjon</span>
+                Systemutvikling
+                <span className="block text-emerald-400">og webutvikling</span>
+                <span className="block">for hele Norge</span>
               </h1>
 
               <p className="text-xl text-gray-300/90 mb-10 leading-relaxed">
-                Tvela AS i Fagernes lager skalerbare webløsninger, systemer,
-                profesjonelt innhold og markedsføring som driver
-                forretningsutvikling i Valdres og resten av Norge.
+                Tvela AS bygger nettsider, systemer og apper for norske
+                bedrifter. Vi har kontor i Fagernes og leverer webutvikling,
+                systemutvikling og fullstack-løsninger over hele landet.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">

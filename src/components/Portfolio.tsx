@@ -155,7 +155,8 @@ const Portfolio: React.FC = () => {
           </h2>
           <div className='w-20 h-1 bg-emerald-500 mx-auto mb-6'></div>
           <p className='text-gray-300 max-w-2xl mx-auto'>
-            Et utvalg av webutvikling, systemutvikling og apper vi har levert.
+            Et utvalg av webutvikling, systemutvikling og apper levert til
+            norske virksomheter.
           </p>
         </div>
 

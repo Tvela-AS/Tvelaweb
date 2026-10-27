@@ -3,16 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tvela AS – Systemutvikling og webutvikling i Valdres</title>
+    <title>Systemutvikling og webutvikling i Norge | Tvela AS</title>
     <meta
       name="description"
-      content="Tvela AS i Fagernes leverer systemutvikling, webutvikling, innholdsproduksjon og markedsføring. Se Folkejury, portefølje og ta kontakt for ditt neste prosjekt."
+      content="Tvela AS leverer systemutvikling, webutvikling og apputvikling til bedrifter i hele Norge. Kontor i Fagernes. Skreddersydde nettsider, systemer og apper."
     />
-    <meta name="author" content="Tvela AS" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="author"
+      content="Tvela AS"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0F172A" />
     <meta name="geo.region" content="NO-34" />
     <meta name="geo.placename" content="Fagernes, Valdres" />
+    <meta name="geo.position" content="60.9858;9.2325" />
+    <meta name="ICBM" content="60.9858, 9.2325" />
 
     <link rel="canonical" href="https://www.tvela.no/" />
     <link rel="icon" type="image/png" href="/img/logo-nobackground-5000.png" />
@@ -24,26 +29,26 @@
     <meta property="og:url" content="https://www.tvela.no/" />
     <meta
       property="og:title"
-      content="Tvela AS – Systemutvikling og webutvikling i Valdres"
+      content="Systemutvikling og webutvikling i Norge | Tvela AS"
     />
     <meta
       property="og:description"
-      content="Systemutvikling, webutvikling, innhold og markedsføring fra Fagernes. Vi bygger skalerbare løsninger og produkter som Folkejury."
+      content="Systemutvikling, webutvikling og apputvikling for norske bedrifter. Fra Fagernes leverer vi skreddersydde løsninger i hele landet."
     />
     <meta
       property="og:image"
       content="https://www.tvela.no/img/logo-nobackground-5000.png"
     />
-    <meta property="og:image:alt" content="Tvela AS-logo" />
+    <meta property="og:image:alt" content="Tvela AS – systemutvikling og webutvikling" />
 
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="Tvela AS – Systemutvikling og webutvikling i Valdres"
+      content="Systemutvikling og webutvikling i Norge | Tvela AS"
     />
     <meta
       name="twitter:description"
-      content="Systemutvikling, webutvikling, innhold og markedsføring fra Fagernes."
+      content="Systemutvikling, webutvikling og apputvikling for bedrifter i hele Norge."
     />
     <meta
       name="twitter:image"
@@ -58,12 +63,17 @@
             "@type": "ProfessionalService",
             "@id": "https://www.tvela.no/#business",
             "name": "Tvela AS",
+            "legalName": "Tvela AS",
             "url": "https://www.tvela.no/",
             "logo": "https://www.tvela.no/img/logo-nobackground-5000.png",
             "image": "https://www.tvela.no/img/logo-nobackground-5000.png",
             "email": "hei@tvela.no",
             "telephone": "+4795961415",
             "foundingDate": "2021",
+            "slogan": "Systemutvikling og webutvikling for hele Norge",
+            "description": "Tvela AS leverer systemutvikling, webutvikling, apputvikling og innholdsproduksjon til bedrifter i hele Norge. Kontor i Fagernes.",
+            "priceRange": "$$",
+            "currenciesAccepted": "NOK",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Valdresvegen 6",
@@ -72,7 +82,24 @@
               "addressRegion": "Innlandet",
               "addressCountry": "NO"
             },
-            "areaServed": ["Valdres", "Innlandet", "Norge"],
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 60.9858,
+              "longitude": 9.2325
+            },
+            "areaServed": [
+              { "@type": "Country", "name": "Norge" },
+              { "@type": "AdministrativeArea", "name": "Innlandet" },
+              { "@type": "AdministrativeArea", "name": "Valdres" }
+            ],
+            "serviceType": [
+              "Systemutvikling",
+              "Webutvikling",
+              "Fullstack utvikling",
+              "Apputvikling",
+              "Programvareutvikling"
+            ],
+            "knowsLanguage": ["nb-NO", "en"],
             "sameAs": [
               "https://github.com/Tvela-AS",
               "https://www.linkedin.com/company/tvela-as/",
@@ -81,12 +108,49 @@
             "knowsAbout": [
               "Systemutvikling",
               "Webutvikling",
+              "Fullstack utvikling",
+              "Apputvikling",
+              "Programvareutvikling",
+              "Nettsider",
               "Innholdsproduksjon",
-              "Markedsføring",
-              "Mobilapplikasjoner",
-              "Digitale konkurranser",
-              "Avstemning"
-            ]
+              "Markedsføring"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Utviklingstjenester",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Webutvikling",
+                    "description": "Nettsider og webapplikasjoner for bedrifter i Norge.",
+                    "areaServed": { "@type": "Country", "name": "Norge" },
+                    "provider": { "@id": "https://www.tvela.no/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Systemutvikling",
+                    "description": "Skreddersydde systemer, integrasjoner og applikasjoner.",
+                    "areaServed": { "@type": "Country", "name": "Norge" },
+                    "provider": { "@id": "https://www.tvela.no/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Apputvikling",
+                    "description": "Mobilapplikasjoner for iOS og Android.",
+                    "areaServed": { "@type": "Country", "name": "Norge" },
+                    "provider": { "@id": "https://www.tvela.no/#business" }
+                  }
+                }
+              ]
+            }
           },
           {
             "@type": "WebSite",
@@ -94,7 +158,65 @@
             "url": "https://www.tvela.no/",
             "name": "Tvela AS",
             "inLanguage": "nb-NO",
+            "description": "Systemutvikling og webutvikling i Norge.",
             "publisher": { "@id": "https://www.tvela.no/#business" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.tvela.no/#webpage",
+            "url": "https://www.tvela.no/",
+            "name": "Systemutvikling og webutvikling i Norge | Tvela AS",
+            "isPartOf": { "@id": "https://www.tvela.no/#website" },
+            "about": { "@id": "https://www.tvela.no/#business" },
+            "inLanguage": "nb-NO",
+            "description": "Tvela AS leverer systemutvikling, webutvikling og apputvikling til bedrifter i hele Norge."
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.tvela.no/#faq",
+            "isPartOf": { "@id": "https://www.tvela.no/#webpage" },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Hva er systemutvikling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Systemutvikling er å designe og bygge programvare som støtter arbeidsflyt og forretning – for eksempel kundeportaler, interne verktøy, integrasjoner og databaser. Tvela AS leverer systemutvikling til bedrifter i hele Norge."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Hva er webutvikling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Webutvikling er å lage nettsider og webapplikasjoner som fungerer i nettleseren. Vi bygger moderne, raske og søkemotorvennlige løsninger – fra bedriftsnettside til mer avanserte webapper."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Leverer dere webutvikling og systemutvikling i hele Norge?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja. Vi har kontor i Fagernes i Valdres, og jobber med kunder over hele landet. Utvikling, møter og oppfølging kan gjøres digitalt, slik at geografisk avstand ikke er et hinder."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Hva koster webutvikling eller et system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Prisen avhenger av omfang, integrasjoner og om det er en nettside, en app eller et skreddersydd system. Vi gir et konkret tilbud etter en kort avklaring."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Lager dere også apper og fullstack-løsninger?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja. Vi leverer fullstack utvikling: webutvikling, systemutvikling, mobilapplikasjoner, sky og database – og kan ta ansvar for både frontend, backend og innhold."
+                }
+              }
+            ]
           },
           {
             "@type": "SoftwareApplication",
@@ -132,8 +254,9 @@
   </head>
   <body>
     <noscript>
-      Tvela AS i Fagernes leverer systemutvikling, webutvikling og
-      innholdsproduksjon. Kontakt oss på hei@tvela.no eller +47 959 61 415.
+      Tvela AS leverer systemutvikling, webutvikling og apputvikling til
+      bedrifter i hele Norge. Kontor i Fagernes, Valdresvegen 6. Kontakt
+      hei@tvela.no eller +47 959 61 415.
     </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
