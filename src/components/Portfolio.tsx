@@ -14,6 +14,17 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 9,
+    title: "Fritim.no",
+    category: "Systemutvikling",
+    image: "/img/fritim.png",
+    alt: "Interim CTO for Fritim.no – plattform for å organisere frivillige",
+    description:
+      "Webplattform for arrangører og frivillige. Fritim gjør det enklere å opprette arrangement, fylle vakter, rekruttere folk og holde oversikt – bygd for norsk frivillighet.",
+    tags: ["Next.js", "TypeScript", "React, vercel, emailjs, node.js, express, postgres, tailwind, typescript, react, vercel, emailjs, node.js, express, postgres, tailwind"],
+    url: "https://www.fritim.no",
+  },
+  {
     id: 8,
     title: "Folkejury – Norsk Rakfiskfestival",
     category: "Systemutvikling",
