@@ -21,7 +21,7 @@ const projects: Project[] = [
     alt: "Interim CTO for Fritim.no – plattform for å organisere frivillige",
     description:
       "Webplattform for arrangører og frivillige. Fritim gjør det enklere å opprette arrangement, fylle vakter, rekruttere folk og holde oversikt – bygd for norsk frivillighet.",
-    tags: ["Next.js", "TypeScript", "React", "Vercel", "EmailJS", "Node.js", "Express", "PostgreSQL", "Tailwind", "Typescript", "React", "Vercel", "EmailJS", "Node.js", "Express", "PostgreSQL", "Tailwind"],
+    tags: ["Next.js", "TypeScript", "React", "Vercel", "EmailJS", "Node.js", "Express", "PostgreSQL", "Tailwind", "Typescript",],
     url: "https://www.fritim.no",
   },
   {
